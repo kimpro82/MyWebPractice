@@ -23,7 +23,7 @@ This directory is for codes that consist of pure *HTML*, *CSS* and *JavaScript*
   - Draw them more naturally with angle and speed
   - Make them disappear gradually like ont the natural snowfield
 - Codes and Results  
-  <!-- ![Dove's Step 1](Images/DoveStep01.gif)   -->
+  ![Dove's Step 1](Images/DoveStep01.gif)  
   <details>
     <summary>DoveStep.html</summary>
 
