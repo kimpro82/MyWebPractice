@@ -1,4 +1,5 @@
 /.git
 /.vscode
-/Web/node_modules
-/Web/package*
+
+/TypeScript/node_modules
+/TypeScript/package*
