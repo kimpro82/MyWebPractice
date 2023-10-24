@@ -1,0 +1,4 @@
+/TypeScript/*.js linguist-vendored
+/Bootstrap/bootstrap5/ linguist-vendored
+
+/VBScript/*.vbs linguist-language=VBScript
