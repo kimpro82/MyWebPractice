@@ -5,11 +5,172 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 
 ### \<List>
 
-- [TypeScript : Big Block Lettering in Console (2023.05.28)](#typescript--big-block-lettering-in-console-20230528)
-- [TypeScript : Hello World (2023.02.28)](#typescript--hello-world-20230228)
+- [Touch Event Practice (2024.01.16)](#touch-event-practice-20240116)
+- [Big Block Lettering in Console (2023.05.28)](#big-block-lettering-in-console-20230528)
+- [Hello World (2023.02.28)](#hello-world-20230228)
 
 
-## [TypeScript : Big Block Lettering in Console (2023.05.28)](#list)
+
+## [Touch Event Practice (2024.01.16)](#list)
+
+- A hands-on exercise for incorporating touch screen functionality into a web page
+  - Initial setup for the project [Touch-Color-Changing Tile App for Babies](https://github.com/kimpro82/MyFamilyCare/issues/32)
+  - Creation of a 3 * 3 array of grid rectangles, each changing colors randomly and independently
+  - Treating both `click` and `touchstart` events as equivalent actions
+- Code and Result
+
+  ![Touch Screen Example](./Images/TouchScreenExample.gif)
+
+  <details>
+    <summary>TouchScreenExample.html</summary>
+
+  ```html
+  <!DOCTYPE html>
+
+  <html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="TouchScreenExample.css">
+      <title>Touchscreen Example</title>
+      <script defer src="TouchScreenExample.js"></script>
+  </head>
+
+  <body>
+      <canvas id="myCanvas"></canvas>
+  </body>
+
+  </html>
+  ```
+  </details>
+  <details>
+    <summary>TouchScreenExample.css</summary>
+
+  ```css
+  body
+  {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+  }
+  ```
+  ```css
+  canvas
+  {
+      border: 1px solid #000;
+  }
+  ```
+  </details>
+  <details>
+    <summary>TouchScreenExample.ts</summary>
+
+  ```ts
+  const canvas = document.getElementById('myCanvas') as HTMLCanvasElement;
+  const context = canvas.getContext('2d');
+
+  const numRows = 3;
+  const numCols = 3;
+  const rectWidth = 100;
+  const rectHeight = 100;
+  const padding = 0;
+
+  // Initial rectangle properties
+  let rectangles: { x: number; y: number; width: number; height: number; color: string }[] = [];
+  ```
+  ```ts
+  // Initial rectangle properties
+  let rectangles: { x: number; y: number; width: number; height: number; color: string }[] = [];
+
+  // Call the initialization function
+  initializeRectangles();
+
+  // Initialize the canvas and draw rectangles
+  function drawRectangles() {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw rectangles
+      rectangles.forEach((rect) => {
+          context.fillStyle = rect.color;
+          context.fillRect(rect.x, rect.y, rect.width, rect.height);
+      });
+  }
+
+  // Initialize grid rectangles
+  function initializeRectangles() {
+      const totalWidth = numCols * (rectWidth + padding) - padding;
+      const totalHeight = numRows * (rectHeight + padding) - padding;
+
+      canvas.width = totalWidth;
+      canvas.height = totalHeight;
+
+      const startX = (canvas.width - totalWidth) / 2;
+      const startY = (canvas.height - totalHeight) / 2;
+
+      rectangles = [];
+
+      for (let row = 0; row < numRows; row++) {
+          for (let col = 0; col < numCols; col++) {
+              const x = startX + col * (rectWidth + padding);
+              const y = startY + row * (rectHeight + padding);
+              const color = getRandomColor();
+
+              rectangles.push({ x, y, width: rectWidth, height: rectHeight, color });
+          }
+      }
+
+      drawRectangles();
+  }
+  ```
+  ```ts
+  // Handle canvas click and touch events
+  canvas.addEventListener('click', handleInput);
+  canvas.addEventListener('touchstart', handleInput, { passive: true });
+
+  // Handle click and touch events function
+  function handleInput(event: MouseEvent | TouchEvent) {
+      // Get coordinates based on the event type
+      const clientX = 'touches' in event ? event.touches[0].clientX : event.clientX;
+      const clientY = 'touches' in event ? event.touches[0].clientY : event.clientY;
+
+      const rect = getClickedRectangle(clientX - canvas.offsetLeft, clientY - canvas.offsetTop);
+
+      if (rect) {
+          // Change the color of the clicked rectangle to a random RGB value
+          rect.color = getRandomColor();
+
+          // Redraw rectangles with the updated color
+          drawRectangles();
+      }
+  }
+
+  // Find the rectangle at the clicked position (temporary workaround for rectangles.find() error)
+  function getClickedRectangle(mouseX: number, mouseY: number) {
+      for (let i = 0; i < rectangles.length; i++) {
+          const rect = rectangles[i];
+          if (
+              mouseX >= rect.x &&
+              mouseX <= rect.x + rect.width &&
+              mouseY >= rect.y &&
+              mouseY <= rect.y + rect.height
+          ) {
+              return rect;
+          }
+      }
+      return null; // No rectangle found at the clicked position
+  }
+
+  // Generate a random RGB color value
+  function getRandomColor() {
+      return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+  }
+  ```
+  </details>
+
+
+## [Big Block Lettering in Console (2023.05.28)](#list)
 
 - Print big block alphabet letters "horizontally" in console (Upper cases only)
   - Reference ☞ Print it "vertically" https://code.sololearn.com/cMjHm80zOip1
@@ -24,7 +185,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   - Enhance design (references)
     - https://github.com/dominikwilkowski/cfonts
     - https://www.itsupportwale.com/blog/print-awesome-ascii-text-in-linux-terminal/
-- Codes and Results
+- Code and Result
   ```shell
   tsc TsBigBlockLettering.ts
   node TsBigBlockLettering.js
@@ -142,7 +303,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
 
-## [TypeScript : Hello World (2023.02.28)](#list)
+## [Hello World (2023.02.28)](#list)
 
 - Preparation
   1. Install *node.js*  ☞ download from `https://nodejs.org/ko/`
@@ -150,7 +311,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 - Write `.ts` file with syntax for types
 - Compile it to `.js` file by `tsc.exe` (`.ts` file can't run directly)  
   : `tsc {filename}.ts`
-- Codes and Results
+- Code and Result
   <details open="">
     <summary>TsHelloWorld.ts</summary>
 
