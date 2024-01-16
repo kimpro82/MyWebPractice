@@ -81,9 +81,6 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   let rectangles: { x: number; y: number; width: number; height: number; color: string }[] = [];
   ```
   ```ts
-  // Initial rectangle properties
-  let rectangles: { x: number; y: number; width: number; height: number; color: string }[] = [];
-
   // Call the initialization function
   initializeRectangles();
 
