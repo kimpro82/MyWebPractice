@@ -7,20 +7,20 @@ var numCols = 3;
 var rectWidth = 100;
 var rectHeight = 100;
 var padding = 0;
-// 초기 사각형 속성
+// Initial rectangle properties
 var rectangles = [];
-// 초기화 함수 호출
+// Call the initialization function
 initializeRectangles();
-// Canvas 초기화 및 사각형 그리기
+// Initialize the canvas and draw rectangles
 function drawRectangles() {
     context.clearRect(0, 0, canvas.width, canvas.height);
-    // 사각형 그리기
+    // Draw rectangles
     rectangles.forEach(function (rect) {
         context.fillStyle = rect.color;
         context.fillRect(rect.x, rect.y, rect.width, rect.height);
     });
 }
-// 격자 사각형 초기화 함수
+// Initialize grid rectangles
 function initializeRectangles() {
     var totalWidth = numCols * (rectWidth + padding) - padding;
     var totalHeight = numRows * (rectHeight + padding) - padding;
@@ -39,23 +39,23 @@ function initializeRectangles() {
     }
     drawRectangles();
 }
-// Canvas 클릭 및 터치 이벤트 처리
+// Handle canvas click and touch events
 canvas.addEventListener('click', handleInput);
 canvas.addEventListener('touchstart', handleInput, { passive: true });
-// 클릭 및 터치 이벤트 처리 함수
+// Handle click and touch events function
 function handleInput(event) {
-    // 이벤트의 타입에 따라서 좌표 정보를 가져오기
+    // Get coordinates based on the event type
     var clientX = 'touches' in event ? event.touches[0].clientX : event.clientX;
     var clientY = 'touches' in event ? event.touches[0].clientY : event.clientY;
     var rect = getClickedRectangle(clientX - canvas.offsetLeft, clientY - canvas.offsetTop);
     if (rect) {
-        // 랜덤한 RGB 값을 생성하여 클릭된 사각형의 색상 변경
+        // Change the color of the clicked rectangle to a random RGB value
         rect.color = getRandomColor();
-        // 변경된 색상으로 사각형 다시 그리기
+        // Redraw rectangles with the updated color
         drawRectangles();
     }
 }
-// 클릭된 위치에 있는 사각형 찾기 : rectangles.find()의 에러 발생에 따른 임시방편
+// Find the rectangle at the clicked position (temporary workaround for rectangles.find() error)
 function getClickedRectangle(mouseX, mouseY) {
     for (var i = 0; i < rectangles.length; i++) {
         var rect = rectangles[i];
@@ -68,7 +68,7 @@ function getClickedRectangle(mouseX, mouseY) {
     }
     return null; // No rectangle found at the clicked position
 }
-// 랜덤한 RGB 값을 생성하는 함수
+// Generate a random RGB color value
 function getRandomColor() {
     return "rgb(".concat(Math.floor(Math.random() * 256), ", ").concat(Math.floor(Math.random() * 256), ", ").concat(Math.floor(Math.random() * 256), ")");
 }
