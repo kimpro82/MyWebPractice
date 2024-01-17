@@ -1,20 +1,59 @@
 interface Link {
   title: string;
   url: string;
+  comment: string;
 }
 
 const linksData: Link[] = [
   {
-    title: 'Google',
-    url: 'https://www.google.com'
+    title: 'TypeScript : Touch Event Practice (2024.01.16)',
+    url: './TypeScript/TouchScreenExample.html',
+    comment: ''
   },
   {
-    title: 'GitHub',
-    url: 'https://www.github.com'
+    title: 'VBScript : Web Calculator (2023.10.14)',
+    url: './VBScript/VbsCalculator.html',
+    comment: 'It requires enabling script execution in Internet Explorer mode'
   },
   {
-    title: 'OpenAI',
-    url: 'https://www.openai.com'
+    title: 'VBScript : Hello World (2023.10.14)',
+    url: './VBScript/VbsHelloWorld.html',
+    comment: 'It requires enabling script execution in Internet Explorer mode'
+  },
+  {
+    title: 'CSS : Mouse Cursor Customization 2 (2023.02.06)',
+    url: './CSS/Cursor2.html',
+    comment: ''
+  },
+  {
+    title: 'CSS : Mouse Cursor Customization (2023.01.29)',
+    url: './CSS/Cursor.html',
+    comment: ''
+  },
+  {
+    title: 'Bootstrap : Magic Stick (2022.01.28)',
+    url: './Bootstrap/BootstrapMagicStick.html',
+    comment: ''
+  },
+  {
+    title: 'JavaScript : Dove\'s Step 1 (2022.01.13)',
+    url: './JavaScript/DoveStep.html',
+    comment: ''
+  },
+  {
+    title: 'JavaScript : Script Tag\'s Location (2022.01.02)',
+    url: './JavaScript/ScriptWithDefer.html',
+    comment: ''
+  },
+  {
+    title: 'JavaScript : Colorful Show (2020.03.04)',
+    url: './JavaScript/ColorfulShow.html',
+    comment: ''
+  },
+  {
+    title: 'JavaScript : Ganzi (2017.04.03)',
+    url: './JavaScript/Ganzi.html',
+    comment: ''
   }
 ];
 
