@@ -16,8 +16,8 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 
 ## [VBScript](/VBScript/)
 
-- [VBScript : Web Calculator (2023.10.14)](/VBScript/README.md#vbscript--web-calculator-20231014)
-- [VBScript : Hello World (2023.10.14)](/VBScript/README.md#vbscript--hello-world-20231014)
+- [Web Calculator (2023.10.14)](/VBScript/README.md#vbscript--web-calculator-20231014)
+- [Hello World (2023.10.14)](/VBScript/README.md#vbscript--hello-world-20231014)
 
 
 ## [CSS](/CSS/)
