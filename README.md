@@ -3,19 +3,21 @@
 Separate web-related codes into this repository because [[MyPractice]](https://github.com/kimpro82/MyPractice) has become too crowded.
 
 
+
 ### \<List>
-
-
-## [VBScript](/VBScript/)
-
-- [VBScript : Web Calculator (2023.10.14)](/VBScript/README.md#vbscript--web-calculator-20231014)
-- [VBScript : Hello World (2023.10.14)](/VBScript/README.md#vbscript--hello-world-20231014)
 
 
 ## [TypeScript](/TypeScript/)
 
-- [TypeScript : Big Block Lettering in Console (2023.05.28)](/TypeScript/README.md#typescript--big-block-lettering-in-console-20230528)
-- [TypeScript : Hello World (2023.02.28)](/TypeScript/README.md#typescript--hello-world-20230228)
+- [Touch Event Practice (2024.01.16)](/TypeScript/README.md#touch-event-practice-20240116)
+- [Big Block Lettering in Console (2023.05.28)](/TypeScript/README.md#big-block-lettering-in-console-20230528)
+- [Hello World (2023.02.28)](/TypeScript/README.md#hello-world-20230228)
+
+
+## [VBScript](/VBScript/)
+
+- [Web Calculator (2023.10.14)](/VBScript/README.md#vbscript--web-calculator-20231014)
+- [Hello World (2023.10.14)](/VBScript/README.md#vbscript--hello-world-20231014)
 
 
 ## [CSS](/CSS/)
