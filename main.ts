@@ -6,6 +6,11 @@ interface Link {
 
 const linksData: Link[] = [
   {
+    title: 'TypeScript : index.html to List Web Pages (2024.01.17)',
+    url: '',
+    comment: 'This page'
+  },
+  {
     title: 'TypeScript : Touch Event Practice (2024.01.16)',
     url: './TypeScript/TouchScreenExample.html',
     comment: ''
@@ -68,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const linkAnchor = document.createElement('a');
       linkAnchor.href = link.url;
       linkAnchor.textContent = link.title;
+      linkAnchor.target = '_blank';
 
       linkItem.appendChild(linkAnchor);
       linksContainer.appendChild(linkItem);
