@@ -5,10 +5,157 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 
 ### \<List>
 
+- [`index.html` to Host Web Pages (2024.01.17)](#indexhtml-to-host-web-pages-20240117)
 - [Touch Event Practice (2024.01.16)](#touch-event-practice-20240116)
 - [Big Block Lettering in Console (2023.05.28)](#big-block-lettering-in-console-20230528)
 - [Hello World (2023.02.28)](#hello-world-20230228)
 
+
+## [`index.html` to Host Web Pages (2024.01.17)](#list)
+
+- Hosting dynamic web pages within this repository
+- Future improvements
+  - Attempted to load link data from an external JSON file but failed (Currently, data is directly written within TypeScript file).
+  - Need to add brief descriptions for each link.
+- Code and Result
+
+  ![index.html](./Images/index.html.PNG)
+
+  <details>
+    <summary>/index.html</summary>
+
+  ```html
+  <!DOCTYPE html>
+
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="main.js"></script>
+    <title>kimpro82.github.io - MyWebPractice</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>My Web Practice</h1>
+    </div>
+
+    <div class="links-container" id="linksContainer"></div>
+  </body>
+
+  </html>
+  ```
+  </details>
+  <details>
+    <summary>/styles.css</summary>
+
+  ```css
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    }
+  ```
+  ```css
+    .links-container {
+      max-width: 500px;
+      width: 100%;
+    }
+  ```
+  ```css
+    .link-item {
+      margin-bottom: 10px;
+    }
+  ```
+  ```css
+    .link-item a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      display: block;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+  ```
+  ```css
+    .link-item a:hover {
+      background-color: #f0f0f0;
+    }
+  ```
+  </details>
+  <details>
+    <summary>/main.ts</summary>
+
+  ```ts
+  interface Link {
+    title: string;
+    url: string;
+    comment: string;
+  }
+
+  const linksData: Link[] = [
+    {
+      title: 'TypeScript : index.html to List Web Pages (2024.01.17)',
+      url: '',
+      comment: 'This page'
+    },
+    ……
+    {
+      title: 'JavaScript : Ganzi (2017.04.03)',
+      url: './JavaScript/Ganzi.html',
+      comment: ''
+    }
+  ];
+  ```
+  ```ts
+  document.addEventListener('DOMContentLoaded', () => {
+    const linksContainer = document.getElementById('linksContainer');
+
+    if (linksContainer) {
+      linksData.forEach((link: { title: string, url: string }) => {
+        const linkItem = document.createElement('div');
+        linkItem.classList.add('link-item');
+
+        const linkAnchor = document.createElement('a');
+        linkAnchor.href = link.url;
+        linkAnchor.textContent = link.title;
+        linkAnchor.target = '_blank';
+
+        linkItem.appendChild(linkAnchor);
+        linksContainer.appendChild(linkItem);
+      });
+    }
+  });
+  ```
+
+  </details>
+  <details>
+    <summary>/links.json</summary>
+
+  ```json
+  [
+    {
+      "title": "TypeScript : index.html to List Web Pages (2024.01.17)",
+      "url": "",
+      "comment": "This page"
+    },
+    ……
+    {
+      "title": "JavaScript : Ganzi (2017.04.03)",
+      "url": "./JavaScript/Ganzi.html",
+      "comment": ""
+    }
+  ]
+  ```
+  </details>
 
 
 ## [Touch Event Practice (2024.01.16)](#list)
