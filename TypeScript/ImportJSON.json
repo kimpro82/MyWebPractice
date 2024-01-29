@@ -1,0 +1,23 @@
+[
+  {
+    "General": "Cao Cao",
+    "Int": 95,
+    "War": 91,
+    "Chm": 95,
+    "Born": 154
+  },
+  {
+    "General": "Liu Bei",
+    "Int": 85,
+    "War": 70,
+    "Chm": 99,
+    "Born": 160
+  },
+  {
+    "General": "Sun Quan",
+    "Int": 89,
+    "War": 87,
+    "Chm": 98,
+    "Born": 181
+  }
+]
