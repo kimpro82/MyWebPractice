@@ -170,7 +170,8 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 
 - Hosting dynamic web pages within this repository
 - Future improvements
-  - Attempted to load link data from an external JSON file but failed (Currently, data is directly written within TypeScript file).
+  - Attempted to load link data from an external JSON file but failed (Currently, data is directly written within TypeScript file).  
+    → [Done (2024.01.30)](../main.ts)
   - Need to add brief descriptions for each link.
 - Code and Result
 
