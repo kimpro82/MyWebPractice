@@ -5,10 +5,165 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 
 ### \<List>
 
+- [Import a JSON file (2024.01.30)](#import-a-json-file-20240130)
 - [`index.html` to Host Web Pages (2024.01.17)](#indexhtml-to-host-web-pages-20240117)
 - [Touch Event Practice (2024.01.16)](#touch-event-practice-20240116)
 - [Big Block Lettering in Console (2023.05.28)](#big-block-lettering-in-console-20230528)
 - [Hello World (2023.02.28)](#hello-world-20230228)
+
+
+## [Import a JSON file (2024.01.30)](#list)
+
+- Success!
+- Code and Result
+
+  ![index.html](./Images/ImportJSON.png)
+
+  <details>
+    <summary>ImportJSON.html</summary>
+
+  ```html
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ImportJSON.css">
+    <script defer src="ImportJSON.js"></script>
+    <title>Import JSON file</title>
+  </head>
+
+  <body>
+  </body>
+
+  </html>
+  ```
+  </details>
+  <details>
+    <summary>ImportJSON.css</summary>
+
+  ```css
+  table {
+      border: 1px solid black;
+      border-collapse : collapse;
+    }
+  ```
+  ```css
+    td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+  ```
+  </details>
+  <details>
+    <summary>ImportJSON.ts</summary>
+
+  ```ts
+  /**
+  * Performs an HTTP GET request to fetch JSON data from the specified URL.
+  * If the request is successful, it calls the renderTable function with the retrieved JSON data.
+  * @param {string} url - The URL from which to fetch JSON data.
+  */
+  const fetchData = (url: string): void => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.responseType = "json";
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        const jsonData: any[] = xhr.response;
+
+        // Call the renderTable function with the retrieved JSON data.
+        renderTable(jsonData);
+      } else {
+        // Log an error if the HTTP request is not successful.
+        console.error("Error fetching JSON data. Status:", xhr.status);
+      }
+    };
+    xhr.send();
+  };
+  ```
+  ```ts
+  /**
+  * Renders a table in the HTML document based on the provided JSON data.
+  * If the JSON data is an array, it creates table rows and cells to display the data.
+  * The first row contains the keys as column headers.
+  * @param {any[]} jsonData - The JSON data to be displayed in the table.
+  */
+  const renderTable = (jsonData: any[]): void => {
+    // Create a table in the HTML document.
+    const table = document.createElement("table");
+    table.classList.add("my-table");
+
+    // Create table rows.
+    jsonData.forEach((general, index) => {
+      // Create table cells.
+      if (index === 0) {
+        // If it is the first row, use keys as column headers.
+        const row = document.createElement("tr");
+        for (const key of Object.keys(general)) {
+          const cell = document.createElement("td");
+          cell.textContent = key;
+          row.appendChild(cell);
+        }
+        table.appendChild(row);
+      }
+
+      const row = document.createElement("tr");
+      for (const key in general) {
+        const cell = document.createElement("td");
+        // If the value is a number, align it to the right.
+        if (!isNaN(general[key])) {
+          cell.style.textAlign = "right";
+        }
+        cell.textContent = general[key];
+        row.appendChild(cell);
+      }
+
+      table.appendChild(row);
+    });
+
+    // Append the table to the HTML document.
+    document.body.appendChild(table);
+  };
+  ```
+  ```ts
+  // URL for fetching JSON data.
+  const dataUrl = "ImportJSON.json";
+
+  // Fetch JSON data and render the table.
+  fetchData(dataUrl);
+  ```
+  </details>
+  <details open="">
+    <summary>ImportJSON.json</summary>
+
+  ```json
+  [
+    {
+      "General": "Cao Cao",
+      "Int": 95,
+      "War": 91,
+      "Chm": 95,
+      "Born": 154
+    },
+    {
+      "General": "Liu Bei",
+      "Int": 85,
+      "War": 70,
+      "Chm": 99,
+      "Born": 160
+    },
+    {
+      "General": "Sun Quan",
+      "Int": 89,
+      "War": 87,
+      "Chm": 98,
+      "Born": 181
+    }
+  ]
+  ```
+  </details>
 
 
 ## [`index.html` to Host Web Pages (2024.01.17)](#list)
