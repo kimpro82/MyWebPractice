@@ -80,6 +80,7 @@ const renderTable = (linksData: Link[]) => {
       const commentCell = document.createElement("td");
 
       // Add appropriate class name to the comment cell
+      row2.classList.add("row2");
       commentCell.classList.add("comment-cell");
 
       // Set colspan to cover all three columns in the second row
@@ -97,5 +98,17 @@ const renderTable = (linksData: Link[]) => {
 
     // Append the table to the linksContainer
     linksContainer.appendChild(table);
+
+    // if (link.url.length > 0) {
+    //   const linkForTable = document.createElement("a");
+    //   // linkForTable.classList.add("link-item");
+    //   linkForTable.href = link.url;
+    //   linkForTable.target = "_blank";
+    //   linkForTable.appendChild(table);
+    //   linksContainer.appendChild(linkForTable);
+    // } else {
+    //   table.classList.add("link-item");
+    //   linksContainer.appendChild(table);
+    // }
   });
 };
