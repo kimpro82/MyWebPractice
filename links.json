@@ -1,0 +1,94 @@
+[
+    {
+      "category": "TypeScript",
+      "title": "Enhance the design of `index.html`",
+      "url": "./index.html",
+      "date": "2024.02.01",
+      "comment": ""
+    },
+    {
+      "category": "TypeScript",
+      "title": "Import a JSON file",
+      "url": "./TypeScript/ImportJSON.html",
+      "date": "2024.01.30",
+      "comment": ""
+    },
+    {
+      "category": "TypeScript",
+      "title": "index.html to List Web Pages",
+      "url": "./index_20240117.html",
+      "date": "2024.01.17",
+      "comment": "This page"
+    },
+    {
+      "category": "TypeScript",
+      "title": "Touch Event Practice",
+      "url": "./TypeScript/TouchScreenExample.html",
+      "date": "2024.01.16",
+      "comment": ""
+    },
+    {
+      "category": "VBScript",
+      "title": "Web Calculator",
+      "url": "./VBScript/VbsCalculator.html",
+      "date": "2023.10.14",
+      "comment": "It requires enabling script execution in Internet Explorer mode"
+    },
+    {
+      "category": "VBScript",
+      "title": "Hello World",
+      "url": "./VBScript/VbsHelloWorld.html",
+      "date": "2023.10.14",
+      "comment": "It requires enabling script execution in Internet Explorer mode"
+    },
+    {
+      "category": "CSS",
+      "title": "Mouse Cursor Customization 2",
+      "url": "./CSS/Cursor2.html",
+      "date": "2023.02.06",
+      "comment": ""
+    },
+    {
+      "category": "CSS",
+      "title": "Mouse Cursor Customization",
+      "url": "./CSS/Cursor.html",
+      "date": "2023.01.29",
+      "comment": ""
+    },
+    {
+      "category": "Bootstrap",
+      "title": " Magic Stick",
+      "url": "./Bootstrap/BootstrapMagicStick.html",
+      "date": "2022.01.28",
+      "comment": ""
+    },
+    {
+      "category": "JavaScript",
+      "title": "Dove's Step 1",
+      "url": "./JavaScript/DoveStep.html",
+      "date": "2022.01.13",
+      "comment": ""
+    },
+    {
+      "category": "JavaScript",
+      "title": "Script Tag's Location",
+      "url": "./JavaScript/ScriptWithDefer.html",
+      "date": "2022.01.02",
+      "comment": ""
+    },
+    {
+      "category": "JavaScript",
+      "title": "Colorful Show",
+      "url": "./JavaScript/ColorfulShow.html",
+      "date": "2020.03.04",
+      "comment": ""
+    },
+    {
+      "category": "JavaScript",
+      "title": "Ganzi",
+      "url": "./JavaScript/Ganzi.html",
+      "date": "2017.04.03",
+      "comment": ""
+    }
+  ]
+  
