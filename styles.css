@@ -16,6 +16,7 @@ h1 {
 
 /* Flex container for links with space-around justification */
 .links-container {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -24,6 +25,7 @@ h1 {
 /* Styling for each link item with border, width, margin, and background color */
 .link-item {
   border-collapse: collapse;
+  border-radius: 20px;
   width: 90%;
   margin: 0;
   margin-bottom: 10px;
@@ -35,7 +37,7 @@ td {
   border: 1px solid darkgray;
   margin: 0;
   padding: 10px;
-  width: 90%;
+  width: 100%;
   transition: transform 0.3s ease;
 }
 
@@ -48,6 +50,7 @@ td {
 /* Styling for category cell with maximum width */
 .category-cell {
   max-width: 20%;
+  border-top-left-radius: 20px;
 }
 
 /* Styling for title cell with flex-grow and left text alignment */
@@ -59,10 +62,18 @@ td {
 /* Styling for date cell with maximum width */
 .date-cell {
   max-width: 20%;
+  border-top-right-radius: 20px;
+}
+
+.row2 {
+  display: flex;
 }
 
 /* Styling for comment cell with left text alignment and smaller font size */
 .comment-cell {
+  flex-grow: 1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   text-align: left;
   font-size: smaller;
 }
@@ -70,15 +81,11 @@ td {
 /* Hover effect for link items with scale transformation */
 .link-item:hover {
   transform: scale(1.05);
+  background-color: papayawhip;
 }
 
 /* Styling for anchor (link) with no text decoration and default color */
 a {
   text-decoration: none;
   color: #333;
-}
-
-/* Hover effect for anchor (link) with color change */
-a:hover {
-  color: #007bff;
 }
