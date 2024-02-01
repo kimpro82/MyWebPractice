@@ -69,7 +69,7 @@ const renderTable = (linksData: Link[]) => {
 
       commentCell.classList.add("comment-cell");
       commentCell.setAttribute("colspan", "3");
-      commentCell.textContent = link.comment;
+      commentCell.innerHTML = `${link.comment}`;
 
       row2.appendChild(commentCell);
       table.appendChild(row2);

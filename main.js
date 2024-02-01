@@ -48,7 +48,7 @@ var renderTable = function (linksData) {
             var commentCell = document.createElement("td");
             commentCell.classList.add("comment-cell");
             commentCell.setAttribute("colspan", "3");
-            commentCell.textContent = link.comment;
+            commentCell.innerHTML = "".concat(link.comment);
             row2.appendChild(commentCell);
             table.appendChild(row2);
         }
