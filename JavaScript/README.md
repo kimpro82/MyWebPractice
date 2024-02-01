@@ -273,7 +273,7 @@ This directory is for codes that consist of pure *HTML*, *CSS* and *JavaScript*
       <head>
 
           ……
-          <script defer src="ScriptInExternalJS.js"></script>
+          <script defer src="ScriptWithDefer.js"></script>
           <!-- don't forget "defer" ! -->
 
       </head>
