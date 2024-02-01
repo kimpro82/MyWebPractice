@@ -32,17 +32,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const renderTable = (linksData: Link[]) => {
+  const linksContainer = document.getElementById("linksContainer");
+
   linksData.forEach((link) => {
     const table = document.createElement("table");
+    table.classList.add("link-item");
 
     const row1 = document.createElement("tr");
+    row1.classList.add("row1");
 
     const categoryCell = document.createElement("td");
     const titleCell = document.createElement("td");
     const dateCell = document.createElement("td");
 
+    categoryCell.classList.add("category-cell");
+    titleCell.classList.add("title-cell");
+    dateCell.classList.add("date-cell");
+
     categoryCell.textContent = link.category;
-    titleCell.innerHTML = `<a href="${link.url}" target="_blank">${link.title}</a>`;
+    if (link.url.length > 0) {
+      titleCell.innerHTML = `<a href="${link.url}" target="_blank">${link.title}</a>`;
+    } else {
+      titleCell.innerHTML = `${link.title}`;
+    }
     dateCell.textContent = link.date;
 
     row1.appendChild(categoryCell);
@@ -55,6 +67,7 @@ const renderTable = (linksData: Link[]) => {
       const row2 = document.createElement("tr");
       const commentCell = document.createElement("td");
 
+      commentCell.classList.add("comment-cell");
       commentCell.setAttribute("colspan", "3");
       commentCell.textContent = link.comment;
 
@@ -62,6 +75,6 @@ const renderTable = (linksData: Link[]) => {
       table.appendChild(row2);
     }
 
-    document.body.appendChild(table);
+    linksContainer.appendChild(table);
   });
 };
