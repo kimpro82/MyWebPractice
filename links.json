@@ -8,10 +8,10 @@
   },
   {
     "category": "TypeScript",
-    "title": "Import a <i>JSON</i> file",
+    "title": "Import a JSON file",
     "date": "2024.01.30",
     "url": "./TypeScript/ImportJSON.html",
-    "comment": "- Fetch <i>JSON</i> data from the specified URL with <i>XMLHttpRequest()</i>"
+    "comment": "- Fetch JSON data from the specified URL with <i>XMLHttpRequest()</i>"
   },
   {
     "category": "TypeScript",
@@ -46,7 +46,7 @@
     "title": "Mouse Cursor Customization 2",
     "date": "2023.02.06",
     "url": "./CSS/Cursor2.html",
-    "comment": "Advanced code from the below : Refine repetitive codes by JavaScript"
+    "comment": "- Advanced code from the below : Refine repetitive codes by JavaScript"
   },
   {
     "category": "CSS",
