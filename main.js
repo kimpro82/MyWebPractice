@@ -19,14 +19,25 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchData();
 });
 var renderTable = function (linksData) {
+    var linksContainer = document.getElementById("linksContainer");
     linksData.forEach(function (link) {
         var table = document.createElement("table");
+        table.classList.add("link-item");
         var row1 = document.createElement("tr");
+        row1.classList.add("row1");
         var categoryCell = document.createElement("td");
         var titleCell = document.createElement("td");
         var dateCell = document.createElement("td");
+        categoryCell.classList.add("category-cell");
+        titleCell.classList.add("title-cell");
+        dateCell.classList.add("date-cell");
         categoryCell.textContent = link.category;
-        titleCell.innerHTML = "<a href=\"".concat(link.url, "\" target=\"_blank\">").concat(link.title, "</a>");
+        if (link.url.length > 0) {
+            titleCell.innerHTML = "<a href=\"".concat(link.url, "\" target=\"_blank\">").concat(link.title, "</a>");
+        }
+        else {
+            titleCell.innerHTML = "".concat(link.title);
+        }
         dateCell.textContent = link.date;
         row1.appendChild(categoryCell);
         row1.appendChild(titleCell);
@@ -35,11 +46,12 @@ var renderTable = function (linksData) {
         if (link.comment.length > 0) {
             var row2 = document.createElement("tr");
             var commentCell = document.createElement("td");
+            commentCell.classList.add("comment-cell");
             commentCell.setAttribute("colspan", "3");
             commentCell.textContent = link.comment;
             row2.appendChild(commentCell);
             table.appendChild(row2);
         }
-        document.body.appendChild(table);
+        linksContainer.appendChild(table);
     });
 };
