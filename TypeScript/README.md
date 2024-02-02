@@ -454,7 +454,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ![index.html](./Images/index.html.PNG)
 
   <details>
-    <summary>/index.html</summary>
+    <summary>/index.html → /index_20240117.html</summary>
 
   ```html
   <!DOCTYPE html>
@@ -464,8 +464,8 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="styles_20240117.css">
+    <script defer src="main_20240117.js"></script>
     <title>kimpro82.github.io - MyWebPractice</title>
   </head>
 
@@ -481,7 +481,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>/styles.css</summary>
+    <summary>/styles.css → /styles_20240117.css</summary>
 
   ```css
   body {
@@ -524,7 +524,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>/main.ts</summary>
+    <summary>/main.ts → /main_20240117.css</summary>
 
   ```ts
   interface Link {
