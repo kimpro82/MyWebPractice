@@ -71,6 +71,7 @@ var renderTable = function (linksData) {
         }
         // Append the table to the linksContainer
         linksContainer.appendChild(table);
+        // The commented-out section below was an alternative approach but is currently not used in the code.
         // if (link.url.length > 0) {
         //   const linkForTable = document.createElement("a");
         //   // linkForTable.classList.add("link-item");
