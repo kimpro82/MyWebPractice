@@ -442,7 +442,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>★ main.ts → main_20240117.ts (mainly changed part)</summary>
+    <summary>★ main.ts → main_20240130.ts (mainly changed part)</summary>
 
   ```ts
   const fetchData = () => {
