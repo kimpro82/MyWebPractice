@@ -1,63 +1,93 @@
 [
   {
-    "title": "TypeScript : Import a JSON file (2024.01.30)",
+    "category": "TypeScript",
+    "title": "Enhance the design of <i>index.html</i>",
+    "date": "2024.02.01",
+    "url": "",
+    "comment": "- This page"
+  },
+  {
+    "category": "TypeScript",
+    "title": "Import a JSON file",
+    "date": "2024.01.30",
     "url": "./TypeScript/ImportJSON.html",
-    "comment": "This page"
+    "comment": "- Fetch JSON data from the specified URL with <i>XMLHttpRequest()</i>"
   },
   {
-    "title": "TypeScript : index.html to List Web Pages (2024.01.17)",
+    "category": "TypeScript",
+    "title": "<i>index.html</i> to List Web Pages",
+    "date": "2024.01.17",
     "url": "./index_20240117.html",
-    "comment": "This page"
+    "comment": "- Host dynamic web pages within this repository"
   },
   {
-    "title": "TypeScript : Touch Event Practice (2024.01.16)",
+    "category": "TypeScript",
+    "title": "Touch Event Practice",
+    "date": "2024.01.16",
     "url": "./TypeScript/TouchScreenExample.html",
-    "comment": ""
+    "comment": "- A hands-on exercise for incorporating touch screen functionality into a web page"
   },
   {
-    "title": "VBScript : Web Calculator (2023.10.14)",
+    "category": "VBScript",
+    "title": "Web Calculator",
+    "date": "2023.10.14",
     "url": "./VBScript/VbsCalculator.html",
-    "comment": "It requires enabling script execution in Internet Explorer mode"
+    "comment": "- Implement a web calculator<br>- It requires enabling script execution in Internet Explorer mode"
   },
   {
-    "title": "VBScript : Hello World (2023.10.14)",
+    "category": "VBScript",
+    "title": "Hello World",
+    "date": "2023.10.14",
     "url": "./VBScript/VbsHelloWorld.html",
-    "comment": "It requires enabling script execution in Internet Explorer mode"
+    "comment": "- Pop up an <i>MsgBox</i> on the web<br>- It requires enabling script execution in Internet Explorer mode"
   },
   {
-    "title": "CSS : Mouse Cursor Customization 2 (2023.02.06)",
+    "category": "CSS",
+    "title": "Mouse Cursor Customization 2",
+    "date": "2023.02.06",
     "url": "./CSS/Cursor2.html",
-    "comment": ""
+    "comment": "- Advanced code from the below : Refine repetitive codes by JavaScript"
   },
   {
-    "title": "CSS : Mouse Cursor Customization (2023.01.29)",
+    "category": "CSS",
+    "title": "Mouse Cursor Customization",
+    "date": "2023.01.29",
     "url": "./CSS/Cursor.html",
-    "comment": ""
+    "comment": "- A practice to customize mouse cursor figure in web"
   },
   {
-    "title": "Bootstrap : Magic Stick (2022.01.28)",
+    "category": "Bootstrap",
+    "title": "Magic Stick",
+    "date": "2022.01.28",
     "url": "./Bootstrap/BootstrapMagicStick.html",
-    "comment": ""
+    "comment": "- I was going to apply grid, but to fail"
   },
   {
-    "title": "JavaScript : Dove's Step 1 (2022.01.13)",
+    "category": "JavaScript",
+    "title": "Dove's Step 1",
+    "date": "2022.01.13",
     "url": "./JavaScript/DoveStep.html",
-    "comment": ""
+    "comment": "- Generate a dove's footprints randomly on HTML Canvas"
   },
   {
-    "title": "JavaScript : Script Tag's Location (2022.01.02)",
+    "category": "JavaScript",
+    "title": "Script Tag's Location",
+    "date": "2022.01.02",
     "url": "./JavaScript/ScriptWithDefer.html",
-    "comment": ""
+    "comment": "- Compare the results from where the &lt;script&gt; tag is located"
   },
   {
-    "title": "JavaScript : Colorful Show (2020.03.04)",
+    "category": "JavaScript",
+    "title": "Colorful Show",
+    "date": "2020.03.04",
     "url": "./JavaScript/ColorfulShow.html",
-    "comment": ""
+    "comment": "- This is a colorful 'Show'"
   },
   {
-    "title": "JavaScript : Ganzi (2017.04.03)",
+    "category": "JavaScript",
+    "title": "Ganzi",
+    "date": "2017.04.03",
     "url": "./JavaScript/Ganzi.html",
-    "comment": ""
+    "comment": "- An initial Javascript practice"
   }
 ]
-  

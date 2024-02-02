@@ -5,6 +5,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 
 ### \<List>
 
+- [Enhance the design of `index.html` (2024.02.01)](#enhance-the-design-of-indexhtml-20240201)
 - [Import a JSON file (2024.01.30)](#import-a-json-file-20240130)
 - [`index.html` to Host Web Pages (2024.01.17)](#indexhtml-to-host-web-pages-20240117)
 - [Touch Event Practice (2024.01.16)](#touch-event-practice-20240116)
@@ -12,9 +13,285 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 - [Hello World (2023.02.28)](#hello-world-20230228)
 
 
+## [Enhance the design of `index.html` (2024.02.01)](#list)
+
+- Better(?) design …… Actually I'm not so curious about the design
+- Future improvements
+  - Apply `<a>` tags to the entire scope of the `<table>`
+  - Add the last updated date
+  - Add some footer information
+  - Improve the directory structure related the hosting page
+- Code and Result
+
+  ![index.html_2](./Images/index.html_2.gif)
+
+  <details>
+    <summary>/index.html (mainly changed part)</summary>
+
+  ```html
+  ……
+
+  <body>
+    <div>
+      ……
+      Frankly speaking, I'm not so interested in the web
+    </div>
+
+    ……
+  </body>
+
+  ……
+  ```
+  </details>
+  <details>
+    <summary>/styles.css</summary>
+
+  ```css
+  /* Body styling for center alignment, width constraints, and font family */
+  body {
+    text-align: center;
+    max-width: 700px;
+    min-width: 600px;
+    margin: auto;                         /* External margin for center alignment */
+    font-family: Arial, sans-serif;
+  }
+  ```
+  ```css
+  /* Styling for h1 element with top margin */
+  h1 {
+    margin-top: 20px;                     /* Add top margin to h1 element */
+  }
+
+  /* Flex container for links with space-around justification */
+  .links-container {
+    margin-top: 20px;                     /* Add margin to separate from h1 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;        /* Arrange items with space around */
+  }
+  ```
+  ```css
+  /* Styling for each link item with border, width, margin, and background color */
+  .link-item {
+    border-collapse: collapse;
+    border-radius: 20px;
+    width: 90%;
+    margin: 0;
+    margin-bottom: 10px;
+    background-color: whitesmoke;         /* Set background color */
+  }
+  ```
+  ```css
+  /* Styling for table cells with border, margin, padding, width, and hover effect */
+  td {
+    border: 1px solid darkgray;           /* Add border to cells */
+    margin: 0;
+    padding: 10px;                        /* Add padding to cells */
+    width: 100%;
+    transition: transform 0.3s ease;      /* Smooth hover effect */
+  }
+  ```
+  ```css
+  /* Flex container for the first row with bold text */
+  .row1 {
+    display: flex;
+    font-weight: bold;                    /* Set text to bold */
+  }
+
+  /* Styling for category cell with maximum width and rounded border */
+  .category-cell {
+    max-width: 20%;
+    border-top-left-radius: 20px;         /* Rounded top-left border */
+  }
+
+  /* Styling for title cell with flex-grow and left text alignment */
+  .title-cell {
+    flex-grow: 1;                         /* Allow title cell to grow */
+    text-align: left;                     /* Left-align text in title cell */
+  }
+
+  /* Styling for date cell with maximum width and rounded border */
+  .date-cell {
+    max-width: 20%;
+    border-top-right-radius: 20px;        /* Rounded top-right border */
+  }
+  ```
+  ```css
+  .row2 {
+    display: flex;                        /* Display second row as a flex container */
+  }
+
+  /* Styling for comment cell with left text alignment, rounded borders, and smaller font size */
+  .comment-cell {
+    flex-grow: 1;                         /* Allow comment cell to grow */
+    border-bottom-left-radius: 20px;      /* Rounded bottom-left border */
+    border-bottom-right-radius: 20px;     /* Rounded bottom-right border */
+    text-align: left;                     /* Left-align text in comment cell */
+    font-size: smaller;                   /* Set smaller font size */
+  }
+  ```
+  ```css
+  /* Hover effect for link items with scale transformation and background color change */
+  .link-item:hover {
+    transform: scale(1.05);               /* Enlarge on hover */
+    background-color: papayawhip;         /* Change background color on hover */
+  }
+  ```
+  ```css
+  /* Styling for anchor (link) with no text decoration and default color */
+  a {
+    text-decoration: none;                /* Remove underline from links */
+    color: #333;                          /* Set default link color */
+  }
+  ```
+  </details>
+  <details>
+    <summary>/main.ts (mainly changed part)</summary>
+
+  ```ts
+  // Interface representing the structure of each link data
+  interface Link {
+    category: string;
+    ……
+    date: string;
+    ……
+  }
+  ```
+  ```ts
+  // Function to fetch link data from links.json using XMLHttpRequest
+  const fetchData = () => {
+    ……
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        ……
+        renderTable(linksData);
+      } ……
+    };
+
+    ……
+  };
+  ```
+  ```ts
+  // Function to render the link data into tables and append them to the linksContainer
+  const renderTable = (linksData: Link[]) => {
+    const linksContainer = document.getElementById("linksContainer");
+
+    linksData.forEach((link) => {
+      // Create a new table for each link
+      const table = document.createElement("table");
+      table.classList.add("link-item");
+
+      // Create the first row of the table
+      const row1 = document.createElement("tr");
+      row1.classList.add("row1");
+
+      // Create cells for category, title, and date
+      const categoryCell = document.createElement("td");
+      const titleCell = document.createElement("td");
+      const dateCell = document.createElement("td");
+
+      // Add appropriate class names to the cells
+      categoryCell.classList.add("category-cell");
+      titleCell.classList.add("title-cell");
+      dateCell.classList.add("date-cell");
+
+      // Populate cell content with link data
+      categoryCell.textContent = link.category;
+      if (link.url.length > 0) {
+        titleCell.innerHTML = `<a href="${link.url}" target="_blank">${link.title}</a>`;
+      } else {
+        titleCell.innerHTML = `${link.title}`;
+      }
+      dateCell.textContent = link.date;
+
+      // Append cells to the first row
+      row1.appendChild(categoryCell);
+      row1.appendChild(titleCell);
+      row1.appendChild(dateCell);
+
+      // Append the first row to the table
+      table.appendChild(row1);
+
+      // Check if the link has a comment, and if so, create a second row for it
+      if (link.comment.length > 0) {
+        const row2 = document.createElement("tr");
+        const commentCell = document.createElement("td");
+
+        // Add appropriate class name to the comment cell
+        row2.classList.add("row2");
+        commentCell.classList.add("comment-cell");
+
+        // Set colspan to cover all three columns in the second row
+        commentCell.setAttribute("colspan", "3");
+
+        // Populate cell content with link comment
+        commentCell.innerHTML = `${link.comment}`;
+
+        // Append the comment cell to the second row
+        row2.appendChild(commentCell);
+
+        // Append the second row to the table
+        table.appendChild(row2);
+      }
+
+      // Append the table to the linksContainer
+      linksContainer.appendChild(table);
+
+      // The commented-out section below was an alternative approach but is currently not used in the code.
+
+      // if (link.url.length > 0) {
+      //   const linkForTable = document.createElement("a");
+      //   // linkForTable.classList.add("link-item");
+      //   linkForTable.href = link.url;
+      //   linkForTable.target = "_blank";
+      //   linkForTable.appendChild(table);
+      //   linksContainer.appendChild(linkForTable);
+      // } else {
+      //   table.classList.add("link-item");
+      //   linksContainer.appendChild(table);
+      // }
+    });
+  };
+  ```
+  </details>
+  <details>
+    <summary>/links.json</summary>
+
+  ```json
+  [
+    {
+      "category": "TypeScript",
+      "title": "Enhance the design of <i>index.html</i>",
+      "date": "2024.02.01",
+      "url": "",
+      "comment": "- This page"
+    },
+    {
+      "category": "TypeScript",
+      "title": "Import a JSON file",
+      "date": "2024.01.30",
+      "url": "./TypeScript/ImportJSON.html",
+      "comment": "- Fetch JSON data from the specified URL with <i>XMLHttpRequest()</i>"
+    },
+    ……
+    {
+      "category": "JavaScript",
+      "title": "Ganzi",
+      "date": "2017.04.03",
+      "url": "./JavaScript/Ganzi.html",
+      "comment": "- An initial Javascript practice"
+    }
+  ]
+  ```
+  </details>
+
+
 ## [Import a JSON file (2024.01.30)](#list)
 
-- Success!
+- Use `XMLHttpRequest()` → Success! (This was a tough process)
+  - Reference : [mdn web docs](https://developer.mozilla.org/) > [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+  - Apply also this new technology(?) immediately to the hosting page as well
 - Code and Result
 
   ![index.html](./Images/ImportJSON.png)
@@ -164,6 +441,45 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ]
   ```
   </details>
+  <details>
+    <summary>★ main.ts → main_20240130.ts (mainly changed part)</summary>
+
+  ```ts
+  const fetchData = () => {
+    const dataUrl = "links_20240117.json";
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", dataUrl, true);
+    xhr.responseType = "json";
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        const linksData: Link[] = xhr.response;
+        renderLinks(linksData);
+      } else {
+        console.error("Error fetching links.json. Status:", xhr.status);
+      }
+    };
+
+    xhr.send();
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    fetchData();
+  });
+  ```
+  ```ts
+  const renderLinks = (linksData: Link[]) => {
+    ……
+
+    if (……) {
+      linksData.forEach((link) => {
+        ……
+      });
+    }
+  };
+  ```
+  </details>
 
 
 ## [`index.html` to Host Web Pages (2024.01.17)](#list)
@@ -171,14 +487,15 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 - Hosting dynamic web pages within this repository
 - Future improvements
   - Attempted to load link data from an external JSON file but failed (Currently, data is directly written within TypeScript file).  
-    → [Done (2024.01.30)](../main.ts)
-  - Need to add brief descriptions for each link.
+    → [Done (2024.01.30)](#import-a-json-file-20240130)
+  - Need to add brief descriptions for each link.  
+    → [Done (2024.02.01)](#enhance-the-design-of-indexhtml-20240201)
 - Code and Result
 
   ![index.html](./Images/index.html.PNG)
 
   <details>
-    <summary>/index.html</summary>
+    <summary>/index.html → /index_20240117.html</summary>
 
   ```html
   <!DOCTYPE html>
@@ -188,8 +505,8 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="styles_20240117.css">
+    <script defer src="main_20240117.js"></script>
     <title>kimpro82.github.io - MyWebPractice</title>
   </head>
 
@@ -205,7 +522,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>/styles.css</summary>
+    <summary>/styles.css → /styles_20240117.css</summary>
 
   ```css
   body {
@@ -248,7 +565,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>/main.ts</summary>
+    <summary>/main.ts → /main_20240117.css</summary>
 
   ```ts
   interface Link {
@@ -294,7 +611,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 
   </details>
   <details>
-    <summary>/links.json</summary>
+    <summary>/links.json → /links_20240117.json</summary>
 
   ```json
   [
@@ -320,6 +637,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   - Initial setup for the project [Touch-Color-Changing Tile App for Babies](https://github.com/kimpro82/MyFamilyCare/issues/32)
   - Creation of a 3 * 3 array of grid rectangles, each changing colors randomly and independently
   - Treating both `click` and `touchstart` events as equivalent actions
+  - Temporarily host `TouchScreenExample.html` at `index.html` with a redirect
 - Code and Result
 
   ![Touch Screen Example](./Images/TouchScreenExample.gif)
@@ -466,6 +784,28 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   function getRandomColor() {
       return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
   }
+  ```
+  </details>
+  <details>
+    <summary>index.html → index_20240116.html</summary>
+
+  ```html
+  <!DOCTYPE html>
+
+  <html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="refresh" content="0;url=./TypeScript/TouchScreenExample.html">
+      <title>kimpro82.github.io - MyWebPractice</title>
+  </head>
+
+  <body>
+      <!-- 이 부분은 보여지지 않습니다. -->
+  </body>
+
+  </html>
   ```
   </details>
 
