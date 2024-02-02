@@ -32,14 +32,14 @@
     "title": "Web Calculator",
     "date": "2023.10.14",
     "url": "./VBScript/VbsCalculator.html",
-    "comment": "- Implement a web calculator using VBScript<br>- It requires enabling script execution in Internet Explorer mode"
+    "comment": "- Implement a web calculator<br>- It requires enabling script execution in Internet Explorer mode"
   },
   {
     "category": "VBScript",
     "title": "Hello World",
     "date": "2023.10.14",
     "url": "./VBScript/VbsHelloWorld.html",
-    "comment": "- Pop up an <i>MsgBox</i> on the web using VBScript<br>- It requires enabling script execution in Internet Explorer mode"
+    "comment": "- Pop up an <i>MsgBox</i> on the web<br>- It requires enabling script execution in Internet Explorer mode"
   },
   {
     "category": "CSS",
