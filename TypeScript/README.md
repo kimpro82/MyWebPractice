@@ -21,12 +21,12 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   - Add the last updated date
   - Add some footer information
   - Improve the directory structure related the hosting page
-- Code (mainly changed part) and Result
+- Code and Result
 
   ![index.html_2](./Images/index.html_2.gif)
 
   <details>
-    <summary>/index.html</summary>
+    <summary>/index.html (mainly changed part)</summary>
 
   ```html
   ……
@@ -146,7 +146,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>/main.ts</summary>
+    <summary>/main.ts (mainly changed part)</summary>
 
   ```ts
   // Interface representing the structure of each link data
@@ -274,7 +274,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
       "url": "./TypeScript/ImportJSON.html",
       "comment": "- Fetch JSON data from the specified URL with <i>XMLHttpRequest()</i>"
     },
-  ……
+    ……
     {
       "category": "JavaScript",
       "title": "Ganzi",
