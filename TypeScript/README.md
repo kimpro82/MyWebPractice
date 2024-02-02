@@ -290,6 +290,9 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 ## [Import a JSON file (2024.01.30)](#list)
 
 - Success!
+  - Use `XMLHttpRequest()`
+    - Reference : [mdn web docs](https://developer.mozilla.org/) > [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+  - Apply also this new technology(?) immediately to the hosting page as well
 - Code and Result
 
   ![index.html](./Images/ImportJSON.png)
@@ -437,6 +440,45 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
       "Born": 181
     }
   ]
+  ```
+  </details>
+  <details>
+    <summary>★ main.ts → main_20240117.ts (mainly changed part)</summary>
+
+  ```ts
+  const fetchData = () => {
+    const dataUrl = "links.json";
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", dataUrl, true);
+    xhr.responseType = "json";
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        const linksData: Link[] = xhr.response;
+        renderLinks(linksData);
+      } else {
+        console.error("Error fetching links.json. Status:", xhr.status);
+      }
+    };
+
+    xhr.send();
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    fetchData();
+  });
+  ```
+  ```ts
+  const renderLinks = (linksData: Link[]) => {
+    ……
+
+    if (……) {
+      linksData.forEach((link) => {
+        ……
+      });
+    }
+  };
   ```
   </details>
 
