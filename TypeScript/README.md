@@ -637,6 +637,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   - Initial setup for the project [Touch-Color-Changing Tile App for Babies](https://github.com/kimpro82/MyFamilyCare/issues/32)
   - Creation of a 3 * 3 array of grid rectangles, each changing colors randomly and independently
   - Treating both `click` and `touchstart` events as equivalent actions
+  - Temporarily host `TouchScreenExample.html` at `index.html` with a redirect
 - Code and Result
 
   ![Touch Screen Example](./Images/TouchScreenExample.gif)
@@ -783,6 +784,28 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   function getRandomColor() {
       return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
   }
+  ```
+  </details>
+  <details>
+    <summary>index.html → index_20240116.html</summary>
+
+  ```html
+  <!DOCTYPE html>
+
+  <html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="refresh" content="0;url=./TypeScript/TouchScreenExample.html">
+      <title>kimpro82.github.io - MyWebPractice</title>
+  </head>
+
+  <body>
+      <!-- 이 부분은 보여지지 않습니다. -->
+  </body>
+
+  </html>
   ```
   </details>
 
