@@ -1,6 +1,6 @@
 // 2024.01.30
 var fetchData = function () {
-    var dataUrl = "links.json";
+    var dataUrl = "links_20240117.json";
     var xhr = new XMLHttpRequest();
     xhr.open("GET", dataUrl, true);
     xhr.responseType = "json";

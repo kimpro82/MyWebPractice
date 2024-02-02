@@ -7,7 +7,7 @@ interface Link {
 }
 
 const fetchData = () => {
-  const dataUrl = "links.json";
+  const dataUrl = "links_20240117.json";
 
   const xhr = new XMLHttpRequest();
   xhr.open("GET", dataUrl, true);
