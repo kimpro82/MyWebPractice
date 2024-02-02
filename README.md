@@ -9,6 +9,7 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 
 ## [TypeScript](/TypeScript/)
 
+- [Enhance the design of `index.html` (2024.02.01)](/TypeScript/README.md#enhance-the-design-of-indexhtml-20240201)
 - [Import a JSON file (2024.01.30)](/TypeScript/README.md#import-a-json-file-20240130)
 - [`index.html` to Host Web Pages (2024.01.17)](/TypeScript/README.md#indexhtml-to-host-web-pages-20240117)
 - [Touch Event Practice (2024.01.16)](/TypeScript/README.md#touch-event-practice-20240116)
