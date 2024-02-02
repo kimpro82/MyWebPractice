@@ -289,9 +289,8 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 
 ## [Import a JSON file (2024.01.30)](#list)
 
-- Success!
-  - Use `XMLHttpRequest()`
-    - Reference : [mdn web docs](https://developer.mozilla.org/) > [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+- Use `XMLHttpRequest()` → Success! (This was a tough process)
+  - Reference : [mdn web docs](https://developer.mozilla.org/) > [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
   - Apply also this new technology(?) immediately to the hosting page as well
 - Code and Result
 
@@ -488,9 +487,9 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 - Hosting dynamic web pages within this repository
 - Future improvements
   - Attempted to load link data from an external JSON file but failed (Currently, data is directly written within TypeScript file).  
-    → [Done (2024.01.30)](../main_20240130.ts)
+    → [Done (2024.01.30)](#import-a-json-file-20240130)
   - Need to add brief descriptions for each link.  
-    → [Done (2024.02.01)](../main.ts)
+    → [Done (2024.02.01)](#enhance-the-design-of-indexhtml-20240201)
 - Code and Result
 
   ![index.html](./Images/index.html.PNG)
