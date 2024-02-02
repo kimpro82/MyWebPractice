@@ -612,7 +612,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 
   </details>
   <details>
-    <summary>/links.json</summary>
+    <summary>/links.json → /links_20240117.json</summary>
 
   ```json
   [
