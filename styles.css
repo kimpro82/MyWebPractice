@@ -1,4 +1,4 @@
-/* 2024.02.01 */
+/* 2024.02.17 */
 
 /* Body styling for center alignment, width constraints, and font family */
 body {
@@ -14,9 +14,16 @@ h1 {
   margin-top: 20px;                     /* Add top margin to h1 element */
 }
 
+/* Styling for date-container element with right alignment */
+.date-container {
+  margin-top: 20px;
+  text-align: right;
+  width: 95%;
+}
+
 /* Flex container for links with space-around justification */
 .links-container {
-  margin-top: 20px;                     /* Add margin to separate from h1 */
+  margin-top: 5px;                     /* Add margin to separate from h1 */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;        /* Arrange items with space around */
@@ -25,11 +32,11 @@ h1 {
 /* Styling for each link item with border, width, margin, and background color */
 .link-item {
   border-collapse: collapse;
-  border-radius: 20px;
+  border-radius: 5px;;
   width: 90%;
   margin: 0;
-  margin-bottom: 10px;
-  background-color: whitesmoke;         /* Set background color */
+  margin-bottom: 5px;
+  background-color: ghostwhite;         /* Set background color */
 }
 
 /* Styling for table cells with border, margin, padding, width, and hover effect */
@@ -50,7 +57,7 @@ td {
 /* Styling for category cell with maximum width and rounded border */
 .category-cell {
   max-width: 20%;
-  border-top-left-radius: 20px;         /* Rounded top-left border */
+  border-top-left-radius: 5px;;         /* Rounded top-left border */
 }
 
 /* Styling for title cell with flex-grow and left text alignment */
@@ -62,7 +69,7 @@ td {
 /* Styling for date cell with maximum width and rounded border */
 .date-cell {
   max-width: 20%;
-  border-top-right-radius: 20px;        /* Rounded top-right border */
+  border-top-right-radius: 5px;;        /* Rounded top-right border */
 }
 
 .row2 {
@@ -72,8 +79,8 @@ td {
 /* Styling for comment cell with left text alignment, rounded borders, and smaller font size */
 .comment-cell {
   flex-grow: 1;                         /* Allow comment cell to grow */
-  border-bottom-left-radius: 20px;      /* Rounded bottom-left border */
-  border-bottom-right-radius: 20px;     /* Rounded bottom-right border */
+  border-bottom-left-radius: 5px;;      /* Rounded bottom-left border */
+  border-bottom-right-radius: 5px;;     /* Rounded bottom-right border */
   text-align: left;                     /* Left-align text in comment cell */
   font-size: smaller;                   /* Set smaller font size */
 }
@@ -81,7 +88,7 @@ td {
 /* Hover effect for link items with scale transformation and background color change */
 .link-item:hover {
   transform: scale(1.05);               /* Enlarge on hover */
-  background-color: papayawhip;         /* Change background color on hover */
+  background-color: lavender;         /* Change background color on hover */
 }
 
 /* Styling for anchor (link) with no text decoration and default color */
