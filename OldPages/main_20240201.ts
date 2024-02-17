@@ -11,7 +11,7 @@ interface Link {
 
 // Function to fetch link data from links.json using XMLHttpRequest
 const fetchData = () => {
-  const dataUrl = "links.json";
+  const dataUrl = "links_20240201.json";
 
   const xhr = new XMLHttpRequest();
   xhr.open("GET", dataUrl, true);

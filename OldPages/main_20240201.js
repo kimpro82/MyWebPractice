@@ -1,7 +1,7 @@
 // 2024.02.01
 // Function to fetch link data from links.json using XMLHttpRequest
 var fetchData = function () {
-    var dataUrl = "links.json";
+    var dataUrl = "links_20240201.json";
     var xhr = new XMLHttpRequest();
     xhr.open("GET", dataUrl, true);
     xhr.responseType = "json";
