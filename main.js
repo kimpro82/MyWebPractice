@@ -1,25 +1,8 @@
-// 2024.02.01
-// Function to fetch link data from links.json using XMLHttpRequest
-var fetchData = function () {
-    var dataUrl = "links.json";
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", dataUrl, true);
-    xhr.responseType = "json";
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            var linksData = xhr.response;
-            renderTable(linksData);
-        }
-        else {
-            console.error("Error fetching links.json. Status:", xhr.status);
-        }
-    };
-    xhr.send();
+// 2024.02.17
+var addRecentUpdate = function (date) {
+    var linksContainer = document.getElementById("dateContainer");
+    linksContainer.textContent = "(".concat(date, ")");
 };
-// Event listener to trigger data fetching when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-    fetchData();
-});
 // Function to render the link data into tables and append them to the linksContainer
 var renderTable = function (linksData) {
     var linksContainer = document.getElementById("linksContainer");
@@ -85,3 +68,26 @@ var renderTable = function (linksData) {
         // }
     });
 };
+// Function to fetch link data from links.json using XMLHttpRequest
+var fetchData = function () {
+    var dataUrl = "links.json";
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", dataUrl, true);
+    xhr.responseType = "json";
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            var linksData = xhr.response;
+            // Add recent update date to the right top corner of linksContainer
+            addRecentUpdate(linksData[0].date);
+            renderTable(linksData);
+        }
+        else {
+            console.error("Error fetching links.json. Status:", xhr.status);
+        }
+    };
+    xhr.send();
+};
+// Event listener to trigger data fetching when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    fetchData();
+});
