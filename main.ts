@@ -1,38 +1,18 @@
-// 2024.02.01
+// 2024.02.17
 
 // Interface representing the structure of each link data
 interface Link {
-  category: string;
-  title: string;
-  date: string;
-  url: string;
-  comment: string;
+  category  : string;
+  title     : string;
+  date      : string;
+  url       : string;
+  comment   : string;
 }
 
-// Function to fetch link data from links.json using XMLHttpRequest
-const fetchData = () => {
-  const dataUrl = "links.json";
-
-  const xhr = new XMLHttpRequest();
-  xhr.open("GET", dataUrl, true);
-  xhr.responseType = "json";
-
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      const linksData: Link[] = xhr.response;
-      renderTable(linksData);
-    } else {
-      console.error("Error fetching links.json. Status:", xhr.status);
-    }
-  };
-
-  xhr.send();
+const addRecentUpdate = (date: string) => {
+  const linksContainer = document.getElementById("dateContainer");
+  linksContainer.textContent = `(${date})`;
 };
-
-// Event listener to trigger data fetching when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", () => {
-  fetchData();
-});
 
 // Function to render the link data into tables and append them to the linksContainer
 const renderTable = (linksData: Link[]) => {
@@ -114,3 +94,31 @@ const renderTable = (linksData: Link[]) => {
     // }
   });
 };
+
+// Function to fetch link data from links.json using XMLHttpRequest
+const fetchData = () => {
+  const dataUrl = "links.json";
+
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", dataUrl, true);
+  xhr.responseType = "json";
+
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      const linksData: Link[] = xhr.response;
+      // Add recent update date to the right top corner of linksContainer
+      addRecentUpdate(linksData[0].date);
+      renderTable(linksData);
+
+    } else {
+      console.error("Error fetching links.json. Status:", xhr.status);
+    }
+  };
+
+  xhr.send();
+};
+
+// Event listener to trigger data fetching when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+  fetchData();
+});
