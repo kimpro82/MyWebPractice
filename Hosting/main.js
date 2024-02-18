@@ -69,7 +69,7 @@ var renderTable = function (linksData) {
  * Triggers the rendering of link data upon successful fetch.
  */
 var fetchData = function () {
-    var dataUrl = "links.json";
+    var dataUrl = "links_test.json";
     var xhr = new XMLHttpRequest();
     xhr.open("GET", dataUrl, true);
     xhr.responseType = "json";
