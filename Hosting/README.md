@@ -1,16 +1,16 @@
 # [Web Hosting](../README.md#typescript)
 
-I heard that no one ignores TypeScript users. However, it was enough for me to be ignored as an individual, even before any programming language.
+Creating a hosting page to demonstrate the actual operation of practice codes …… has become quite a separate project???
 
 
 ### \<List>
 
-- [Enhance the design of `index.html` 2 (2024.02.17)](#enhance-the-design-of-indexhtml-2-20240217)
-- [Enhance the design of `index.html` (2024.02.01)](#enhance-the-design-of-indexhtml-20240201)
+- [`index.html` 3: Enhance the Code Structure and the Design (2024.02.17)](#indexhtml-3-enhance-the-code-structure-and-the-design-20240217)
+- [`index.html` 2: Enhance the Design (2024.02.01)](#indexhtml-2-enhance-the-design-20240201)
 - [`index.html` to Host Web Pages (2024.01.17)](#indexhtml-to-host-web-pages-20240117)
 
 
-## [Enhance the design of `index.html` 2 (2024.02.17)](#list)
+## [`index.html` 3: Enhance the Code Structure and the Design (2024.02.17)](#list)
 
 - Features
   - Apply `<a>` tags to the entire scope of the `<table>`
@@ -209,7 +209,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
 
-## [Enhance the design of `index.html` (2024.02.01)](#list)
+## [`index.html` 2: Enhance the Design (2024.02.01)](#list)
 
 - Better(?) design …… Actually I'm not so curious about the design
 - Future improvements
@@ -222,7 +222,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ![index.html_2](./Images/index.html_2.gif)
 
   <details>
-    <summary>/index.html (changed)</summary>
+    <summary>/index.html (changed) → index_20240201.html (moved)</summary>
 
   ```html
   ……
@@ -240,7 +240,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>/styles.css</summary>
+    <summary>/styles.css (changed) → styles_20240201.html (moved)</summary>
 
   ```css
   /* Body styling for center alignment, width constraints, and font family */
@@ -342,7 +342,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>/main.ts (changed)</summary>
+    <summary>/main.ts (changed) → main_20240201.html (moved)</summary>
 
   ```ts
   // Interface representing the structure of each link data
@@ -452,7 +452,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>/links.json</summary>
+    <summary>/links.json (changed) → links_20240201.html (moved)</summary>
 
   ```json
   [
@@ -489,7 +489,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 - Hosting dynamic web pages within this repository
 - Future improvements
   - Attempted to load link data from an external JSON file but failed (Currently, data is directly written within TypeScript file).  
-    → [Done (2024.01.30)](#import-a-json-file-20240130)
+    → [Done (2024.01.30)](/TypeScript/README.md#import-a-json-file-20240130)
   - Need to add brief descriptions for each link.  
     → [Done (2024.02.01)](#enhance-the-design-of-indexhtml-20240201)
 - Code and Result
@@ -497,7 +497,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ![index.html](./Images/index.html.PNG)
 
   <details>
-    <summary>/index.html → /index_20240117.html</summary>
+    <summary>/index.html → index_20240117.html (moved)</summary>
 
   ```html
   <!DOCTYPE html>
@@ -524,7 +524,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>/styles.css → /styles_20240117.css</summary>
+    <summary>/styles.css → styles_20240117.css (moved)</summary>
 
   ```css
   body {
@@ -567,7 +567,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>/main.ts → /main_20240117.css</summary>
+    <summary>/main.ts → main_20240117.css (moved)</summary>
 
   ```ts
   interface Link {
@@ -613,7 +613,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 
   </details>
   <details>
-    <summary>/links.json → /links_20240117.json</summary>
+    <summary>/links.json (not used) → links_20240117.json (moved)</summary>
 
   ```json
   [
