@@ -1,32 +1,22 @@
-// 2024.02.01
-// Function to fetch link data from links.json using XMLHttpRequest
-var fetchData = function () {
-    var dataUrl = "links.json";
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", dataUrl, true);
-    xhr.responseType = "json";
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            var linksData = xhr.response;
-            renderTable(linksData);
-        }
-        else {
-            console.error("Error fetching links.json. Status:", xhr.status);
-        }
-    };
-    xhr.send();
+// 2024.02.17
+/**
+ * Adds the recent update date to the top right corner of the links container.
+ * @param {string} date The recent update date to be displayed.
+ */
+var addRecentUpdate = function (date) {
+    var linksContainer = document.getElementById("dateContainer");
+    linksContainer.textContent = "(".concat(date, ")");
 };
-// Event listener to trigger data fetching when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-    fetchData();
-});
-// Function to render the link data into tables and append them to the linksContainer
+/**
+ * Renders the link data into tables and appends them to the links container.
+ * @param {Link[]} linksData An array of link data to be rendered.
+ */
 var renderTable = function (linksData) {
     var linksContainer = document.getElementById("linksContainer");
+    // Iterate over each link data
     linksData.forEach(function (link) {
         // Create a new table for each link
         var table = document.createElement("table");
-        table.classList.add("link-item");
         // Create the first row of the table
         var row1 = document.createElement("tr");
         row1.classList.add("row1");
@@ -40,12 +30,7 @@ var renderTable = function (linksData) {
         dateCell.classList.add("date-cell");
         // Populate cell content with link data
         categoryCell.textContent = link.category;
-        if (link.url.length > 0) {
-            titleCell.innerHTML = "<a href=\"".concat(link.url, "\" target=\"_blank\">").concat(link.title, "</a>");
-        }
-        else {
-            titleCell.innerHTML = "".concat(link.title);
-        }
+        titleCell.innerHTML = "".concat(link.title);
         dateCell.textContent = link.date;
         // Append cells to the first row
         row1.appendChild(categoryCell);
@@ -69,19 +54,40 @@ var renderTable = function (linksData) {
             // Append the second row to the table
             table.appendChild(row2);
         }
-        // Append the table to the linksContainer
-        linksContainer.appendChild(table);
-        // The commented-out section below was an alternative approach but is currently not used in the code.
-        // if (link.url.length > 0) {
-        //   const linkForTable = document.createElement("a");
-        //   // linkForTable.classList.add("link-item");
-        //   linkForTable.href = link.url;
-        //   linkForTable.target = "_blank";
-        //   linkForTable.appendChild(table);
-        //   linksContainer.appendChild(linkForTable);
-        // } else {
-        //   table.classList.add("link-item");
-        //   linksContainer.appendChild(table);
-        // }
+        // Create an anchor element to wrap the table and provide link functionality
+        var linkElement = document.createElement("a");
+        linkElement.className = "link-item";
+        linkElement.href = link.url;
+        linkElement.target = link.url.length > 0 ? "_blank" : "_self"; // Open in new tab if URL exists
+        linkElement.appendChild(table);
+        // Append the link element to the links container
+        linksContainer.appendChild(linkElement);
     });
 };
+/**
+ * Fetches link data from links.json using XMLHttpRequest.
+ * Triggers the rendering of link data upon successful fetch.
+ */
+var fetchData = function () {
+    var dataUrl = "links.json";
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", dataUrl, true);
+    xhr.responseType = "json";
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            var linksData = xhr.response;
+            // Add recent update date to the top right corner of the links container
+            addRecentUpdate(linksData[0].date);
+            // Render the link data
+            renderTable(linksData);
+        }
+        else {
+            console.error("Error fetching links.json. Status:", xhr.status);
+        }
+    };
+    xhr.send();
+};
+// Event listener to trigger data fetching when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    fetchData();
+});

@@ -9,12 +9,17 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 
 ## [TypeScript](/TypeScript/)
 
-- [Enhance the design of `index.html` (2024.02.01)](/TypeScript/README.md#enhance-the-design-of-indexhtml-20240201)
 - [Import a JSON file (2024.01.30)](/TypeScript/README.md#import-a-json-file-20240130)
-- [`index.html` to Host Web Pages (2024.01.17)](/TypeScript/README.md#indexhtml-to-host-web-pages-20240117)
 - [Touch Event Practice (2024.01.16)](/TypeScript/README.md#touch-event-practice-20240116)
 - [Big Block Lettering in Console (2023.05.28)](/TypeScript/README.md#big-block-lettering-in-console-20230528)
 - [Hello World (2023.02.28)](/TypeScript/README.md#hello-world-20230228)
+
+
+### [Web Hosting](/Hosting/)
+
+- [`index.html` 3: Enhance the Code Structure and the Design (2024.02.17)](/Hosting/README.md#indexhtml-3-enhance-the-code-structure-and-the-design-20240217)
+- [`index.html` 2: Enhance the Design (2024.02.01)](/Hosting/README.md#indexhtml-2-enhance-the-design-20240201)
+- [`index.html` to Host Web Pages (2024.01.17)](/Hosting/README.md#indexhtml-to-host-web-pages-20240117)
 
 
 ## [VBScript](/VBScript/)
