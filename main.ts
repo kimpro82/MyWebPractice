@@ -1,27 +1,36 @@
 // 2024.02.17
 
-// Interface representing the structure of each link data
+/**
+ * Interface representing the structure of each link data.
+ */
 interface Link {
-  category  : string;
-  title     : string;
-  date      : string;
-  url       : string;
-  comment   : string;
+  category: string; // The category of the link.
+  title: string;    // The title of the link.
+  date: string;     // The date when the link was added or updated.
+  url: string;      // The URL of the link.
+  comment: string;  // Any additional comments or notes about the link.
 }
 
+/**
+ * Adds the recent update date to the top right corner of the links container.
+ * @param {string} date The recent update date to be displayed.
+ */
 const addRecentUpdate = (date: string) => {
   const linksContainer = document.getElementById("dateContainer");
   linksContainer.textContent = `(${date})`;
 };
 
-// Function to render the link data into tables and append them to the linksContainer
+/**
+ * Renders the link data into tables and appends them to the links container.
+ * @param {Link[]} linksData An array of link data to be rendered.
+ */
 const renderTable = (linksData: Link[]) => {
   const linksContainer = document.getElementById("linksContainer");
 
+  // Iterate over each link data
   linksData.forEach((link) => {
     // Create a new table for each link
     const table = document.createElement("table");
-    table.classList.add("link-item");
 
     // Create the first row of the table
     const row1 = document.createElement("tr");
@@ -39,11 +48,7 @@ const renderTable = (linksData: Link[]) => {
 
     // Populate cell content with link data
     categoryCell.textContent = link.category;
-    if (link.url.length > 0) {
-      titleCell.innerHTML = `<a href="${link.url}" target="_blank">${link.title}</a>`;
-    } else {
-      titleCell.innerHTML = `${link.title}`;
-    }
+    titleCell.innerHTML = `${link.title}`;
     dateCell.textContent = link.date;
 
     // Append cells to the first row
@@ -76,26 +81,22 @@ const renderTable = (linksData: Link[]) => {
       table.appendChild(row2);
     }
 
-    // Append the table to the linksContainer
-    linksContainer.appendChild(table);
+    // Create an anchor element to wrap the table and provide link functionality
+    const linkElement = document.createElement("a");
+    linkElement.className = "link-item";
+    linkElement.href = link.url;
+    linkElement.target = link.url.length > 0 ? "_blank" : "_self";              // Open in new tab if URL exists; Cool!
+    linkElement.appendChild(table);
 
-    // The commented-out section below was an alternative approach but is currently not used in the code.
-
-    // if (link.url.length > 0) {
-    //   const linkForTable = document.createElement("a");
-    //   // linkForTable.classList.add("link-item");
-    //   linkForTable.href = link.url;
-    //   linkForTable.target = "_blank";
-    //   linkForTable.appendChild(table);
-    //   linksContainer.appendChild(linkForTable);
-    // } else {
-    //   table.classList.add("link-item");
-    //   linksContainer.appendChild(table);
-    // }
+    // Append the link element to the links container
+    linksContainer.appendChild(linkElement);
   });
 };
 
-// Function to fetch link data from links.json using XMLHttpRequest
+/**
+ * Fetches link data from links.json using XMLHttpRequest.
+ * Triggers the rendering of link data upon successful fetch.
+ */
 const fetchData = () => {
   const dataUrl = "links.json";
 
@@ -106,10 +107,10 @@ const fetchData = () => {
   xhr.onload = function () {
     if (xhr.status === 200) {
       const linksData: Link[] = xhr.response;
-      // Add recent update date to the right top corner of linksContainer
+      // Add recent update date to the top right corner of the links container
       addRecentUpdate(linksData[0].date);
+      // Render the link data
       renderTable(linksData);
-
     } else {
       console.error("Error fetching links.json. Status:", xhr.status);
     }

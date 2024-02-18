@@ -2,11 +2,11 @@
 
 /* Body styling for center alignment, width constraints, and font family */
 body {
-  text-align: center;
-  max-width: 700px;
-  min-width: 600px;
+  text-align: center;                   /* Center-align text */
+  max-width: 700px;                     /* Set maximum width */
+  min-width: 600px;                     /* Set minimum width */
   margin: auto;                         /* External margin for center alignment */
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;       /* Set font family */
 }
 
 /* Styling for h1 element with top margin */
@@ -16,48 +16,54 @@ h1 {
 
 /* Styling for date-container element with right alignment */
 .date-container {
-  margin-top: 20px;
-  text-align: right;
-  width: 95%;
+  margin-top: 20px;                     /* Add top margin */
+  text-align: right;                    /* Align text to the right */
+  width: 94.5%;                         /* Set width */
+  font-size: smaller;                   /* Set smaller font size */
 }
 
 /* Flex container for links with space-around justification */
 .links-container {
-  margin-top: 5px;                     /* Add margin to separate from h1 */
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: 5px;                      /* Add margin to separate from h1 */
+  display: flex;                        /* Use flexbox */
+  flex-wrap: wrap;                      /* Allow wrapping */
   justify-content: space-around;        /* Arrange items with space around */
 }
 
 /* Styling for each link item with border, width, margin, and background color */
 .link-item {
-  border-collapse: collapse;
-  border-radius: 5px;;
-  width: 90%;
-  margin: 0;
-  margin-bottom: 5px;
+  border-collapse: collapse;            /* Collapse table borders */
+  border-radius: 5px;                   /* Add border radius */
+  width: 90%;                           /* Set width */
+  margin: 0;                            /* Remove default margin */
+  margin-bottom: 5px;                   /* Add bottom margin */
   background-color: ghostwhite;         /* Set background color */
+}
+
+/* Set width for tables */
+table {
+  width: 100%;
 }
 
 /* Styling for table cells with border, margin, padding, width, and hover effect */
 td {
   border: 1px solid darkgray;           /* Add border to cells */
-  margin: 0;
+  margin: 0;                            /* Remove default margin */
   padding: 10px;                        /* Add padding to cells */
-  width: 100%;
+  width: 100%;                          /* Set width */
   transition: transform 0.3s ease;      /* Smooth hover effect */
 }
 
 /* Flex container for the first row with bold text */
 .row1 {
-  display: flex;
+  display: flex;                        /* Use flexbox */
   font-weight: bold;                    /* Set text to bold */
 }
 
 /* Styling for category cell with maximum width and rounded border */
 .category-cell {
-  max-width: 20%;
-  border-top-left-radius: 5px;;         /* Rounded top-left border */
+  max-width: 20%;                       /* Set maximum width */
+  border-top-left-radius: 5px;          /* Rounded top-left border */
 }
 
 /* Styling for title cell with flex-grow and left text alignment */
@@ -68,8 +74,8 @@ td {
 
 /* Styling for date cell with maximum width and rounded border */
 .date-cell {
-  max-width: 20%;
-  border-top-right-radius: 5px;;        /* Rounded top-right border */
+  max-width: 20%;                       /* Set maximum width */
+  border-top-right-radius: 5px;         /* Rounded top-right border */
 }
 
 .row2 {
@@ -79,8 +85,8 @@ td {
 /* Styling for comment cell with left text alignment, rounded borders, and smaller font size */
 .comment-cell {
   flex-grow: 1;                         /* Allow comment cell to grow */
-  border-bottom-left-radius: 5px;;      /* Rounded bottom-left border */
-  border-bottom-right-radius: 5px;;     /* Rounded bottom-right border */
+  border-bottom-left-radius: 5px;       /* Rounded bottom-left border */
+  border-bottom-right-radius: 5px;      /* Rounded bottom-right border */
   text-align: left;                     /* Left-align text in comment cell */
   font-size: smaller;                   /* Set smaller font size */
 }
@@ -88,7 +94,7 @@ td {
 /* Hover effect for link items with scale transformation and background color change */
 .link-item:hover {
   transform: scale(1.05);               /* Enlarge on hover */
-  background-color: lavender;         /* Change background color on hover */
+  background-color: lavender;           /* Change background color on hover */
 }
 
 /* Styling for anchor (link) with no text decoration and default color */
