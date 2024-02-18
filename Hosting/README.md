@@ -1,4 +1,4 @@
-# [Web Hosting](../README.md#typescript)
+# [Web Hosting](../README.md#web-hosting)
 
 Creating a hosting page to demonstrate the actual operation of practice codes …… has become quite a separate project???
 
@@ -212,7 +212,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
 ## [`index.html` 2: Enhance the Design (2024.02.01)](#list)
 
 - Better(?) design …… Actually I'm not so curious about the design
-- Future improvements
+- Future improvements → [All done (2024.02.17)](#indexhtml-3-enhance-the-code-structure-and-the-design-20240217)
   - Apply `<a>` tags to the entire scope of the `<table>`
   - Add the last updated date
   - Add some footer information
@@ -491,7 +491,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   - Attempted to load link data from an external JSON file but failed (Currently, data is directly written within TypeScript file).  
     → [Done (2024.01.30)](/TypeScript/README.md#import-a-json-file-20240130)
   - Need to add brief descriptions for each link.  
-    → [Done (2024.02.01)](#enhance-the-design-of-indexhtml-20240201)
+    → [Done (2024.02.01)](#indexhtml-2-enhance-the-design-20240201)
 - Code and Result
 
   ![index.html](./Images/index.html.PNG)
