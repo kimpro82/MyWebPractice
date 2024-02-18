@@ -17,8 +17,8 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 
 ### [Web Hosting](/Hosting/)
 
-- [Enhance the design of `index.html` 2 (2024.02.17)](/Hosting/README.md#enhance-the-design-of-indexhtml-2-20240217)
-- [Enhance the design of `index.html` (2024.02.01)](/Hosting/README.md#enhance-the-design-of-indexhtml-20240201)
+- [`index.html` 3: Enhance the Code Structure and the Design (2024.02.17)](/Hosting/README.md#indexhtml-3-enhance-the-code-structure-and-the-design-20240217)
+- [`index.html` 2: Enhance the Design (2024.02.01)](/Hosting/README.md#indexhtml-2-enhance-the-design-20240201)
 - [`index.html` to Host Web Pages (2024.01.17)](/Hosting/README.md#indexhtml-to-host-web-pages-20240117)
 
 
