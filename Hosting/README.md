@@ -15,8 +15,8 @@ Creating a hosting page to demonstrate the actual operation of practice codes â€
 
 - Why error?
   - The absolute path `/` in this repository indicates `https://{owner}.github.io/`, not `https://{owner}.github.io/{repo}/`
-  - So `/{directory}` is going to request `https://{owner}.github.io/{directory}`, not `https://{owner}.github.io/{repe}/{directory}`, that causes an 404 error
-  - This is different from what `/` means in `README.md`!
+  - So `/{directory}` is going to request `https://{owner}.github.io/{directory}`, not `https://{owner}.github.io/{repe}/{directory}`, which causes an 404 error
+  - This differs from the meaning of `/` in `README.md`!
 - Fix paths
   - All `/{directory}` to `./{directory}` in `/index.html`
   - All `/{directory}` to `../{directory}` in `/Hosting`
