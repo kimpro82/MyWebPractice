@@ -33,7 +33,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   <details>
     <summary>links.json and so on (changed)</summary>
 
-  ```json
+  ```ts
       ……
       "url": "../Hosting/index_20240201.html",
       ……
@@ -657,7 +657,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   <details>
     <summary>/links.json (not used) → links_20240117.json (moved)</summary>
 
-  ```json
+  ```ts
   [
     {
       "title": "TypeScript : index.html to List Web Pages (2024.01.17)",
