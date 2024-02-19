@@ -19,7 +19,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes â€
   - This differs from the meaning of `/` in `README.md`!
 - Fix paths
   - All `/{directory}` to `./{directory}` in `/index.html`
-  - All `/{directory}` to `../{directory}` in `/Hosting`
+  - All `/{directory}` to `../{directory}` in `/Hosting/links.json` and so on
 - Code and Result
   <details>
     <summary>/index.html (changed)</summary>
