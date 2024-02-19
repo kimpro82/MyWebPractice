@@ -1,13 +1,44 @@
-# [Web Hosting](../README.md#web-hosting)
+# [Web Hosting](../README.md#※-web-hosting)
 
 Creating a hosting page to demonstrate the actual operation of practice codes …… has become quite a separate project???
 
 
 ### \<List>
 
+- [`index.html` 3.1: Fix Error *404 Not Found* (2024.02.19)](#indexhtml-31-fix-error-404-not-found-20240219)
 - [`index.html` 3: Enhance the Code Structure and the Design (2024.02.17)](#indexhtml-3-enhance-the-code-structure-and-the-design-20240217)
 - [`index.html` 2: Enhance the Design (2024.02.01)](#indexhtml-2-enhance-the-design-20240201)
 - [`index.html` to Host Web Pages (2024.01.17)](#indexhtml-to-host-web-pages-20240117)
+
+
+## [`index.html` 3.1: Fix Error *404 Not Found* (2024.02.19)](#list)
+
+- Why error?
+  - The absolute path `/` in this repository indicates `https://{owner}.github.io/`, not `https://{owner}.github.io/{repo}/`
+  - So `/{directory}` is going to request `https://{owner}.github.io/{directory}`, not `https://{owner}.github.io/{repe}/{directory}`, that causes an 404 error
+  - This is different from what `/` means in `README.md`!
+- Fix paths
+  - All `/{directory}` to `./{directory}` in `/index.html`
+  - All `/{directory}` to `../{directory}` in `/Hosting`
+- Code and Result
+  <details>
+    <summary>/index.html (changed)</summary>
+
+  ```html
+      ……
+      <meta http-equiv="refresh" content="0;url=./Hosting/index.html">  
+      ……
+  ```
+  </details>
+  <details>
+    <summary>links.json and so on (changed)</summary>
+
+  ```json
+      ……
+      "url": "../Hosting/index_20240201.html",
+      ……
+  ```
+  </details>
 
 
 ## [`index.html` 3: Enhance the Code Structure and the Design (2024.02.17)](#list)
@@ -22,7 +53,17 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   ![index.html_3](./Images/index.html_3.gif)
 
   <details>
-    <summary>/index.html (changed)</summary>
+    <summary>index_20240116.html → /index.html (copied & changed)</summary>
+
+  ```html
+  ……
+      <meta http-equiv="refresh" content="0;url=/Hosting/index.html">
+      <title>(just for redirecting)</title>
+  ……
+  ```
+  </details>
+  <details>
+    <summary>index.html (changed)</summary>
 
   ```html
   ……
@@ -56,7 +97,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   ```
   </details>
   <details>
-    <summary>/styles.css (changed)</summary>
+    <summary>styles.css (changed)</summary>
 
   ```css
   /* Styling for date-container element with right alignment */
@@ -123,7 +164,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   ```
   </details>
   <details>
-    <summary>/main.ts (changed)</summary>
+    <summary>main.ts (changed)</summary>
 
   ```ts
   /**
@@ -159,7 +200,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   ```
   </details>
   <details>
-    <summary>/links_test.json (new)</summary>
+    <summary>links_test.json (new)</summary>
 
   ```json
   [
@@ -208,6 +249,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   ]
   ```
   </details>
+
 
 ## [`index.html` 2: Enhance the Design (2024.02.01)](#list)
 
