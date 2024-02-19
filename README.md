@@ -1,4 +1,4 @@
-# [My Web Practice](/README.md#※-web-hosting)
+# My Web Practice
 
 Separate web-related codes into this repository because [[MyPractice]](https://github.com/kimpro82/MyPractice) has become too crowded.
 
