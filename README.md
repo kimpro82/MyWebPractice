@@ -1,4 +1,4 @@
-# My Web Practice
+# [My Web Practice](/README.md#※-web-hosting)
 
 Separate web-related codes into this repository because [[MyPractice]](https://github.com/kimpro82/MyPractice) has become too crowded.
 
@@ -15,8 +15,9 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 - [Hello World (2023.02.28)](/TypeScript/README.md#hello-world-20230228)
 
 
-### [Web Hosting](/Hosting/)
+### [※ Web Hosting](/Hosting/)
 
+- [`index.html` 3.1: Fix Error *404 Not Found* (2024.02.19)](/Hosting/README.md#indexhtml-31-fix-error-404-not-found-20240219)
 - [`index.html` 3: Enhance the Code Structure and the Design (2024.02.17)](/Hosting/README.md#indexhtml-3-enhance-the-code-structure-and-the-design-20240217)
 - [`index.html` 2: Enhance the Design (2024.02.01)](/Hosting/README.md#indexhtml-2-enhance-the-design-20240201)
 - [`index.html` to Host Web Pages (2024.01.17)](/Hosting/README.md#indexhtml-to-host-web-pages-20240117)
