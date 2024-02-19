@@ -467,7 +467,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes â€
       "category": "TypeScript",
       "title": "Import a JSON file",
       "date": "2024.01.30",
-      "url": "./TypeScript/ImportJSON.html",
+      "url": "../TypeScript/ImportJSON.html",
       "comment": "- Fetch JSON data from the specified URL with <i>XMLHttpRequest()</i>"
     },
     â€¦â€¦
@@ -475,7 +475,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes â€
       "category": "JavaScript",
       "title": "Ganzi",
       "date": "2017.04.03",
-      "url": "./JavaScript/Ganzi.html",
+      "url": "../JavaScript/Ganzi.html",
       "comment": "- An initial Javascript practice"
     }
   ]
@@ -585,7 +585,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes â€
     â€¦â€¦
     {
       title: 'JavaScript : Ganzi (2017.04.03)',
-      url: './JavaScript/Ganzi.html',
+      url: '../JavaScript/Ganzi.html',
       comment: ''
     }
   ];
