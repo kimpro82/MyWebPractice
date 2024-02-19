@@ -496,7 +496,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes â€
   <details>
     <summary>/links.json (changed) â†’ links_20240201.html (moved)</summary>
 
-  ```json
+  ```ts
   [
     {
       "category": "TypeScript",
