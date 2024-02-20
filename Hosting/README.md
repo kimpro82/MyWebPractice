@@ -1,13 +1,44 @@
-# [Web Hosting](../README.md#web-hosting)
+# [Web Hosting](../README.md#※-web-hosting)
 
 Creating a hosting page to demonstrate the actual operation of practice codes …… has become quite a separate project???
 
 
 ### \<List>
 
+- [`index.html` 3.1: Fix Error *404 Not Found* (2024.02.19)](#indexhtml-31-fix-error-404-not-found-20240219)
 - [`index.html` 3: Enhance the Code Structure and the Design (2024.02.17)](#indexhtml-3-enhance-the-code-structure-and-the-design-20240217)
 - [`index.html` 2: Enhance the Design (2024.02.01)](#indexhtml-2-enhance-the-design-20240201)
 - [`index.html` to Host Web Pages (2024.01.17)](#indexhtml-to-host-web-pages-20240117)
+
+
+## [`index.html` 3.1: Fix Error *404 Not Found* (2024.02.19)](#list)
+
+- Why error?
+  - The absolute path `/` in this repository indicates `https://{owner}.github.io/`, not `https://{owner}.github.io/{repo}/`
+  - So `/{directory}` is going to request `https://{owner}.github.io/{directory}`, not `https://{owner}.github.io/{repe}/{directory}`, which causes an 404 error
+  - This differs from the meaning of `/` in `README.md`!
+- Fix paths
+  - All `/{directory}` to `./{directory}` in `/index.html`
+  - All `/{directory}` to `../{directory}` in `/Hosting/links.json` and so on
+- Code and Result
+  <details>
+    <summary>/index.html (changed)</summary>
+
+  ```html
+      ……
+      <meta http-equiv="refresh" content="0;url=./Hosting/index.html">  
+      ……
+  ```
+  </details>
+  <details>
+    <summary>links.json and so on (changed)</summary>
+
+  ```ts
+      ……
+      "url": "../Hosting/index_20240201.html",
+      ……
+  ```
+  </details>
 
 
 ## [`index.html` 3: Enhance the Code Structure and the Design (2024.02.17)](#list)
@@ -22,7 +53,17 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   ![index.html_3](./Images/index.html_3.gif)
 
   <details>
-    <summary>/index.html (changed)</summary>
+    <summary>index_20240116.html → /index.html (copied & changed)</summary>
+
+  ```html
+  ……
+      <meta http-equiv="refresh" content="0;url=/Hosting/index.html">
+      <title>(just for redirecting)</title>
+  ……
+  ```
+  </details>
+  <details>
+    <summary>index.html (changed)</summary>
 
   ```html
   ……
@@ -56,7 +97,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   ```
   </details>
   <details>
-    <summary>/styles.css (changed)</summary>
+    <summary>styles.css (changed)</summary>
 
   ```css
   /* Styling for date-container element with right alignment */
@@ -123,7 +164,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   ```
   </details>
   <details>
-    <summary>/main.ts (changed)</summary>
+    <summary>main.ts (changed)</summary>
 
   ```ts
   /**
@@ -159,7 +200,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   ```
   </details>
   <details>
-    <summary>/links_test.json (new)</summary>
+    <summary>links_test.json (new)</summary>
 
   ```json
   [
@@ -208,6 +249,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   ]
   ```
   </details>
+
 
 ## [`index.html` 2: Enhance the Design (2024.02.01)](#list)
 
@@ -454,7 +496,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   <details>
     <summary>/links.json (changed) → links_20240201.html (moved)</summary>
 
-  ```json
+  ```ts
   [
     {
       "category": "TypeScript",
@@ -467,7 +509,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
       "category": "TypeScript",
       "title": "Import a JSON file",
       "date": "2024.01.30",
-      "url": "./TypeScript/ImportJSON.html",
+      "url": "../TypeScript/ImportJSON.html",
       "comment": "- Fetch JSON data from the specified URL with <i>XMLHttpRequest()</i>"
     },
     ……
@@ -475,7 +517,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
       "category": "JavaScript",
       "title": "Ganzi",
       "date": "2017.04.03",
-      "url": "./JavaScript/Ganzi.html",
+      "url": "../JavaScript/Ganzi.html",
       "comment": "- An initial Javascript practice"
     }
   ]
@@ -585,7 +627,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
     ……
     {
       title: 'JavaScript : Ganzi (2017.04.03)',
-      url: './JavaScript/Ganzi.html',
+      url: '../JavaScript/Ganzi.html',
       comment: ''
     }
   ];
@@ -615,7 +657,7 @@ Creating a hosting page to demonstrate the actual operation of practice codes �
   <details>
     <summary>/links.json (not used) → links_20240117.json (moved)</summary>
 
-  ```json
+  ```ts
   [
     {
       "title": "TypeScript : index.html to List Web Pages (2024.01.17)",
