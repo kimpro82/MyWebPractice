@@ -5,10 +5,50 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 
 ### \<List>
 
+- [`helloWorld("console.log")` (2024.05.23)](#helloworldconsolelog-20240523)
 - [Import a JSON file (2024.01.30)](#import-a-json-file-20240130)
 - [Touch Event Practice (2024.01.16)](#touch-event-practice-20240116)
 - [Big Block Lettering in Console (2023.05.28)](#big-block-lettering-in-console-20230528)
 - [Hello World (2023.02.28)](#hello-world-20230228)
+
+
+## [`helloWorld("console.log")` (2024.05.23)](#list)
+
+- Just for fun ☞ [related meme](https://www.reddit.com/r/ProgrammerHumor/comments/13u2mfm/_/)
+  - Other language version ☞ [Python](https://github.com/kimpro82/MyPractice/blob/master//Python/README.md#hello_worldprint-20240523) [Bash](https://github.com/kimpro82/MyPractice/blob/master/Shell/README.md#hello_worldecho-20240523)
+- Code and Result
+  <details>
+    <summary>Code : HelloWorldConsoleLog.ts</summary>
+
+  ```ts
+  function helloWorld(funcName: string): void {
+      /**
+      * Dynamically calls the given function using its name.
+      * The name of the current executing function is passed as an argument.
+      *
+      * @param funcName Name of the function to be called
+      */
+      const currentFuncName = helloWorld.name;
+      const func = new Function(`return ${funcName}`)();
+      func(currentFuncName);
+  }
+  ```
+  ```ts
+  // Dynamically executes the console.log function
+  helloWorld("console.log");
+  ```
+  </details>
+  <details open="">
+    <summary>Result</summary>
+
+  ```shell
+  tsc HelloWorldConsoleLog.ts
+  node HelloWorldConsoleLog.js
+  ```
+  ```shell
+  helloWorld
+  ```
+  </details>
 
 
 ## [Import a JSON file (2024.01.30)](#list)

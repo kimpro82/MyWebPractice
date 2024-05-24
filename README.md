@@ -16,6 +16,7 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 
 ## [TypeScript](/TypeScript/)
 
+- [`helloWorld("console.log")` (2024.05.23)](/TypeScript/README.md#helloworldconsolelog-20240523)
 - [Import a JSON file (2024.01.30)](/TypeScript/README.md#import-a-json-file-20240130)
 - [Touch Event Practice (2024.01.16)](/TypeScript/README.md#touch-event-practice-20240116)
 - [Big Block Lettering in Console (2023.05.28)](/TypeScript/README.md#big-block-lettering-in-console-20230528)
