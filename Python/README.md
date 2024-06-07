@@ -10,12 +10,14 @@ Django, Flask and FastAPI
 
 ## [Flask/FastAPI : Sum Calculator (2024.06.07)](#list)
 
-- Initial Practice of *Flask* and *FastAPI*
+- Initial Practice of Flask and FastAPI  
+  - Flask is simple but FastAPI supports asynchronous programming.
+  - The results are absolutely the same.
 
   ![Sum Calculator](./Images/Flask_FastAPI_SumCalculator.png)
 
-  - Flask is simple but FastAPI supports asynchronous programming.
-  - The results are absolutely the same.
+- Development Environment  
+  - *Python* 3.8.17 / *Flask* 3.0.3 / *fastapi* 0.111.0 / *Jinja2* 3.1.4 in [*Replit*](https://replit.com/)
 
 - How to Run
   - Flask
