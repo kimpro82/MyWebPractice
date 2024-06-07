@@ -14,6 +14,11 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 - [`index.html` to Host Web Pages (2024.01.17)](/Hosting/README.md#indexhtml-to-host-web-pages-20240117)
 
 
+## [Python](/Python/)
+
+- [Flask/FastAPI : Sum Calculator (2024.06.07)](/Python/README.md#flaskfastapi--sum-calculator-20240607)
+
+
 ## [TypeScript](/TypeScript/)
 
 - [`helloWorld("console.log")` (2024.05.23)](/TypeScript/README.md#helloworldconsolelog-20240523)
