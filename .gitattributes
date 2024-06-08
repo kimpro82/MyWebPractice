@@ -1,5 +1,6 @@
 /Hosting/*.js linguist-vendored
-/TypeScript/*.js linguist-vendored
-/Bootstrap/bootstrap5/ linguist-vendored
 
+/Bootstrap/bootstrap5/ linguist-vendored
+/Python/*_rendered.html linguist-vendored
+/TypeScript/*.js linguist-vendored
 /VBScript/*.vbs linguist-language=VBScript

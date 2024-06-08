@@ -1,5 +1,12 @@
 [
   {
+    "category": "Flask/FastAPI",
+    "title": "Initial Practice : Sum Calculator",
+    "date": "2024.06.07",
+    "url": "../Python/flask/sum_calc/templates/index_rendered.html",
+    "comment": "- This page is a rendered static HTML document and does not function dynamically.<br>- Both Flask and FastAPI produce the same result."
+  },
+  {
     "category": "TypeScript",
     "title": "<i>index.html</i> 3 : Enhance the Code Structure and the Design",
     "date": "2024.02.17",
