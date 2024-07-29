@@ -1,0 +1,58 @@
+/* 
+  Today's Random Joke
+  2024.07.29
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    padding-top: 20px; /* 화면 상단의 공백 조절 */
+  }
+
+  .title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+  }
+
+  .joke {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    white-space: pre-wrap; /* Preserve whitespace and handle line breaks */
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .footer {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 10px;
+    text-align: center;
+  }
