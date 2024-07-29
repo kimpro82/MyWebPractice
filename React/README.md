@@ -1,4 +1,4 @@
-# [My React Practice](../README.md)
+# [My React Practice](../README.md#react)
 
 Do React, but don't be reactive
 
