@@ -1,10 +1,17 @@
 [
   {
+    "category": "React-TypeScript",
+    "title": "Initial Practice : Random Joke",
+    "date": "2024.07.29",
+    "url": "",
+    "comment": "- This page is a rendered by this hosting.<br>![Random Joke](../React/Images/RandomJoke_20240729.gif)"
+  },
+  {
     "category": "Flask/FastAPI",
     "title": "Initial Practice : Sum Calculator",
     "date": "2024.06.07",
-    "url": "../Python/flask/sum_calc/templates/index_rendered.html",
-    "comment": "- This page is a rendered static HTML document and does not function dynamically.<br>- Both Flask and FastAPI produce the same result."
+    "url": "",
+    "comment": "- This page is a rendered static HTML document and does not function dynamically.<br>- Both Flask and FastAPI produce the same result.<br>![Sum Calculator](../Python/Images/Flask_FastAPI_SumCalculator.png)"
   },
   {
     "category": "TypeScript",
