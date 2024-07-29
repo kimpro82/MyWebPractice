@@ -10,8 +10,8 @@
     "category": "Flask/FastAPI",
     "title": "Initial Practice : Sum Calculator",
     "date": "2024.06.07",
-    "url": "",
-    "comment": "- This page is a rendered static HTML document and does not function dynamically.<br>- Both Flask and FastAPI produce the same result.<br><br><center><img src=\"../Python/Images/Flask_FastAPI_SumCalculator.png\" width=50%></center>"
+    "url": "../Python/fastapi/sum_calc/templates/index_rendered.html",
+    "comment": "- This page is a rendered static HTML document and does not function dynamically.<br>- Both Flask and FastAPI produce the same result.<br><br><center><img src=\"../Python/Images/Flask_FastAPI_SumCalculator.png\"></center>"
   },
   {
     "category": "TypeScript",
