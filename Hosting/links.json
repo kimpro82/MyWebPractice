@@ -32,7 +32,7 @@
     "title": "Import a JSON file",
     "date": "2024.01.30",
     "url": "../TypeScript/ImportJSON.html",
-    "comment": "- Fetch JSON data from the specified URL with <i>XMLHttpRequest()</i>"
+    "comment": "- Fetch JSON data from the specified URL with <i>XMLHttpRequest()</i><br><br><center><img src=\"../TypeScript/Images/ImportJSON.png\"></center>"
   },
   {
     "category": "TypeScript",
@@ -46,69 +46,69 @@
     "title": "Touch Event Practice",
     "date": "2024.01.16",
     "url": "../TypeScript/TouchScreenExample.html",
-    "comment": "- A hands-on exercise for incorporating touch screen functionality into a web page"
+    "comment": "- A hands-on exercise for incorporating touch screen functionality into a web page<br><br><center><img src=\"../TypeScript/Images/TouchScreenExample.gif\"></center>"
   },
   {
     "category": "VBScript",
     "title": "Web Calculator",
     "date": "2023.10.14",
     "url": "../VBScript/VbsCalculator.html",
-    "comment": "- Implement a web calculator<br>- It requires enabling script execution in Internet Explorer mode"
+    "comment": "- Implement a web calculator<br>- It requires enabling script execution in Internet Explorer mode<br><br><center><img src=\"../VBScript/Images/VbsCalculator.gif\"></center>"
   },
   {
     "category": "VBScript",
     "title": "Hello World",
     "date": "2023.10.14",
     "url": "../VBScript/VbsHelloWorld.html",
-    "comment": "- Pop up an <i>MsgBox</i> on the web<br>- It requires enabling script execution in Internet Explorer mode"
+    "comment": "- Pop up an <i>MsgBox</i> on the web<br>- It requires enabling script execution in Internet Explorer mode<br><br><center><img src=\"../VBScript/Images/VbsHelloWorld.png\"></center>"
   },
   {
     "category": "CSS",
     "title": "Mouse Cursor Customization 2",
     "date": "2023.02.06",
     "url": "../CSS/Cursor2.html",
-    "comment": "- Advanced code from the below : Refine repetitive codes by JavaScript"
+    "comment": "- Advanced code from the below : Refine repetitive codes by JavaScript<br><br><center><img src=\"../CSS/Images/Cursor2.gif\"></center>"
   },
   {
     "category": "CSS",
     "title": "Mouse Cursor Customization",
     "date": "2023.01.29",
     "url": "../CSS/Cursor.html",
-    "comment": "- A practice to customize mouse cursor figure in web"
+    "comment": "- A practice to customize mouse cursor figure in web<br><br><center><img src=\"../CSS/Images/Cursor.gif\"></center>"
   },
   {
     "category": "Bootstrap",
     "title": "Magic Stick",
     "date": "2022.01.28",
     "url": "../Bootstrap/BootstrapMagicStick.html",
-    "comment": "- I was going to apply grid, but to fail"
+    "comment": "- I was going to apply grid, but to fail<br><br><center><img src=\"../Bootstrap/Images/BootstrapMagicStick.gif\" width=100%></center>"
   },
   {
     "category": "JavaScript",
     "title": "Dove's Step 1",
     "date": "2022.01.13",
     "url": "../JavaScript/DoveStep.html",
-    "comment": "- Generate a dove's footprints randomly on HTML Canvas"
+    "comment": "- Generate a dove's footprints randomly on HTML Canvas<br><br><center><img src=\"../JavaScript/Images/DoveStep01.gif\" width=60%></center>"
   },
   {
     "category": "JavaScript",
     "title": "Script Tag's Location",
     "date": "2022.01.02",
     "url": "../JavaScript/ScriptWithDefer.html",
-    "comment": "- Compare the results from where the &lt;script&gt; tag is located"
+    "comment": "- Compare the results from where the &lt;script&gt; tag is located<br><br><center><img src=\"../JavaScript/Images/ScriptInExternalJS.PNG\"></center>"
   },
   {
     "category": "JavaScript",
     "title": "Colorful Show",
     "date": "2020.03.04",
     "url": "../JavaScript/ColorfulShow.html",
-    "comment": "- This is a colorful 'Show'"
+    "comment": "- This is a colorful 'Show'<br><br><center><img src=\"../JavaScript/Images/ColorfulShow.gif\"></center>"
   },
   {
     "category": "JavaScript",
     "title": "Ganzi",
     "date": "2017.04.03",
     "url": "../JavaScript/Ganzi.html",
-    "comment": "- An initial Javascript practice"
+    "comment": "- An initial Javascript practice<br><br><center><img src=\"../JavaScript/Images/Ganzi.gif\"></center>"
   }
 ]
