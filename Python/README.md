@@ -83,9 +83,7 @@ Django, Flask and FastAPI
           <br>
           <input type="submit" value="Calculate">
       </form>
-      {% if result is not none %}
-          <h2>Result: {{ result }}</h2>
-      {% endif %}
+      …… Skip this part because it causes an error when deploying to GitHub ……
   </body>
   </html>
   ```
@@ -164,9 +162,7 @@ Django, Flask and FastAPI
           <br>
           <input type="submit" value="Calculate">
       </form>
-      {% if result is not none %}
-          <h2>Result: {{ result }}</h2>
-      {% endif %}
+      …… Skip this part because it causes an error when deploying to GitHub ……
   </body>
   </html>
   ```
