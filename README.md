@@ -22,6 +22,9 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 ### [Python](/Python/)
 - [Flask/FastAPI : Sum Calculator (2024.06.07)](/Python/README.md#flaskfastapi--sum-calculator-20240607)
 
+### [Bootstrap](/Bootstrap/)
+- [Bootstrap : Magic Stick (2022.01.28)](/Bootstrap/README.md#bootstrap--magic-stick-20220128)
+
 
 ## Scripting Languages
 
@@ -49,6 +52,3 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 ### [CSS](/CSS/)
 - [Mouse Cursor Customization 2 (2023.02.06)](/CSS/README.md#mouse-cursor-customization-2-20230206)
 - [Mouse Cursor Customization (2023.01.29)](/CSS/README.md#mouse-cursor-customization-20230129)
-
-### [Bootstrap](/Bootstrap/)
-- [Bootstrap : Magic Stick (2022.01.28)](/Bootstrap/README.md#bootstrap--magic-stick-20220128)
