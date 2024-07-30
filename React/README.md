@@ -5,14 +5,17 @@ Do React, but don't be reactive
 
 ### \<List>
 
-- [React : Random Joke (2024.07.29)](#react--random-joke-20240729)
+- [React-TypeScript : Random Joke (2024.07.29)](#react-typescript--random-joke-20240729)
 
 
-## [React : Random Joke (2024.07.29)](#list)
+## [React-TypeScript : Random Joke (2024.07.29)](#list)
 
 - Initial Practice of React-TypeScript
 
   ![Today's Random Joke](./Images/RandomJoke_20240729.gif)
+
+- Random Joke API
+  - https://official-joke-api.appspot.com/random_joke
 
 - Development Environment  
   - *npm* 8.19.2 / *react-typescript* 1.0.0 / *tsc* 4.7.4 / *vite* 3.0.4 in [*Replit*](https://replit.com/)

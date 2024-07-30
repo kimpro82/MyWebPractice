@@ -17,7 +17,7 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 ## Web Frameworks
 
 ### [React](/React/)
-- [React : Random Joke (2024.07.29)](/React/README.md#react--random-joke-20240729)
+- [React-TypeScript : Random Joke (2024.07.29)](/React/README.md#react-typescript--random-joke-20240729)
 
 ### [Python](/Python/)
 - [Flask/FastAPI : Sum Calculator (2024.06.07)](/Python/README.md#flaskfastapi--sum-calculator-20240607)
