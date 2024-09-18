@@ -2,5 +2,6 @@
 
 /Bootstrap/bootstrap5/ linguist-vendored
 /Python/*_rendered.html linguist-vendored
+/SVG/*.js linguist-vendored
 /TypeScript/*.js linguist-vendored
 /VBScript/*.vbs linguist-language=VBScript
