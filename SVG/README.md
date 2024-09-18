@@ -1,6 +1,7 @@
 # [My SVG Practice](../README.md#svg)
 
-Super
+Actually I'm not so interested in doing graphic work on the web
+
 
 ### \<List>
 
