@@ -29,32 +29,30 @@ Super
     <summary>shape_color_changer.html</summary>
 
   ```html
-  <!DOCTYPE html>
+  <!doctype html>
 
   <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>SVG Practice : Shape Color Changer</title>
+      <link rel="stylesheet" href="shape_color_changer.css" />
+      <script defer src="shape_color_changer.js" type="module"></script>
+    </head>
 
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SVG Practice : Shape Color Changer</title>
-  <link rel="stylesheet" href="shape_color_changer.css">
-  <script defer src="shape_color_changer.js" type="module"></script>
-  </head>
+    <body>
+      <h1>SVG Practice : Shape Color Changer</h1>
 
-  <body>
-  <h1>SVG Practice : Shape Color Changer</h1>
+      <!-- Embed the external SVG file -->
+      <object id="svgObject" type="image/svg+xml" data="shape.svg"></object>
 
-  <!-- Embed the external SVG file -->
-  <object id="svgObject" type="image/svg+xml" data="shape.svg"></object>
-
-  <!-- Buttons for changing colors of each shape -->
-  <div id="buttons">
-      <button id="changeRectColor">Square</button>
-      <button id="changeTriangleColor">Triangle</button>
-      <button id="changeCircleColor">Circle</button>
-  </div>
-  </body>
-
+      <!-- Buttons for changing colors of each shape -->
+      <div id="buttons">
+        <button id="changeRectColor">Square</button>
+        <button id="changeTriangleColor">Triangle</button>
+        <button id="changeCircleColor">Circle</button>
+      </div>
+    </body>
   </html>
   ```
   </details>
