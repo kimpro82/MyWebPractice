@@ -50,7 +50,7 @@ Actually I'm not so interested in doing graphic work on the web
 
       <!-- Buttons for changing colors of each shape -->
       <div id="buttons">
-        <button id="changeRectColor">Square</button>
+        <button id="changeSquareColor">Square</button>
         <button id="changeTriangleColor">Triangle</button>
         <button id="changeCircleColor">Circle</button>
       </div>
