@@ -2,7 +2,7 @@
 // Author : kimpro82
 // Date   : 2024.09.18
 var svgObject = document.getElementById('svgObject');
-var changeRectColorBtn = document.getElementById('changeRectColor');
+var changeRectColorBtn = document.getElementById('changeSquareColor');
 var changeTriangleColorBtn = document.getElementById('changeTriangleColor');
 var changeCircleColorBtn = document.getElementById('changeCircleColor');
 /**
@@ -33,6 +33,6 @@ function changeColor(shapeId) {
     }
 }
 // Add event listeners to each button to change the color of the corresponding SVG shape
-changeRectColorBtn.addEventListener('click', function () { return changeColor('rect'); });
+changeRectColorBtn.addEventListener('click', function () { return changeColor('square'); });
 changeTriangleColorBtn.addEventListener('click', function () { return changeColor('triangle'); });
 changeCircleColorBtn.addEventListener('click', function () { return changeColor('circle'); });
