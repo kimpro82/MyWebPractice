@@ -91,7 +91,7 @@ Actually I'm not so interested in doing graphic work on the web
 
   ```ts
   const svgObject = document.getElementById('svgObject') as HTMLObjectElement;
-  const changeRectColorBtn = document.getElementById('changeRectColor') as HTMLButtonElement;
+  const changeRectColorBtn = document.getElementById('changeSquareColor') as HTMLButtonElement;
   const changeTriangleColorBtn = document.getElementById('changeTriangleColor') as HTMLButtonElement;
   const changeCircleColorBtn = document.getElementById('changeCircleColor') as HTMLButtonElement;
   ```
@@ -128,7 +128,7 @@ Actually I'm not so interested in doing graphic work on the web
   ```
   ```ts
   // Add event listeners to each button to change the color of the corresponding SVG shape
-  changeRectColorBtn.addEventListener('click', () => changeColor('rect'));
+  changeRectColorBtn.addEventListener('click', () => changeColor('square'));
   changeTriangleColorBtn.addEventListener('click', () => changeColor('triangle'));
   changeCircleColorBtn.addEventListener('click', () => changeColor('circle'));
   ```
