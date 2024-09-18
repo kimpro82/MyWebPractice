@@ -1,0 +1,28 @@
+/*
+  Title  : SVG Practice / Shape Color Changer
+  Author : kimpro82
+  Date   : 2024.09.18
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 5%;
+}
+
+#svgObject {
+  margin-top: 2%;
+  width: 60%;
+}
+
+#buttons {
+  margin-top: 2%;
+}
+
+button {
+  margin: 1%;
+  padding: 1% 1%;
+  width: 18%;
+  font-size: 1.2em;
+  cursor: pointer;
+}
