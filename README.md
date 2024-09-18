@@ -52,3 +52,8 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 ### [CSS](/CSS/)
 - [Mouse Cursor Customization 2 (2023.02.06)](/CSS/README.md#mouse-cursor-customization-2-20230206)
 - [Mouse Cursor Customization (2023.01.29)](/CSS/README.md#mouse-cursor-customization-20230129)
+
+
+## [SVG](/SVG/)
+
+- [Initial Practice : Shape Color Changer (2024.09.18)](/SVG/README.md#initial-practice--shape-color-changer-20240918)
