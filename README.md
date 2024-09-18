@@ -56,4 +56,4 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 
 ## [SVG](/SVG/)
 
-- [Initial Practice : Shape Color Changer (2024.09.18)](/SVG/README.md#initial-practice--shape-color-changer-20240918)
+- [Shape Color Changer (2024.09.18)](/SVG/README.md#shape-color-changer-20240918)

@@ -5,11 +5,12 @@ Actually I'm not so interested in doing graphic work on the web
 
 ### \<List>
 
-- [Initial Practice : Shape Color Changer (2024.09.18)](#initial-practice--shape-color-changer-20240918)
+- [Shape Color Changer (2024.09.18)](#shape-color-changer-20240918)
 
 
-## [Initial Practice : Shape Color Changer (2024.09.18)](#list)
+## [Shape Color Changer (2024.09.18)](#list)
 
+- Initial practice with SVG
 - Output
 
   ![Shape Color Changer](./Images/SVG_ShapeColorChanger.gif)
