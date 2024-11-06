@@ -5,7 +5,102 @@ Actually I'm not so interested in doing graphic work on the web
 
 ### \<List>
 
+- [Cybertruck (2024.11.06)](#cybertruck-20241106)
 - [Shape Color Changer (2024.09.18)](#shape-color-changer-20240918)
+
+
+
+## [Cybertruck (2024.11.06)](#list)
+
+- There's no special reason to do this ……
+- CSS can handle all the animation effects without the need for JavaScript.
+
+  ![Cybertruck](./Images/SVG_Cybertruck.gif)
+
+- Code
+  <details>
+    <summary>cybertruck.svg</summary>
+
+  ```svg
+  <svg xmlns="http://www.w3.org/2000/svg" width="450" height="180" viewBox="0 0 500 200">
+      <!-- Car Body -->
+      <polygon points="80,150 70,85 280,50 430,110 425,150" fill="#c0c0c0" stroke="black" stroke-width="2"/>
+      <line x1="70" y1="85" x2="430" y2="110" stroke="#333333" stroke-width="2"/>
+
+      <!-- Door Lines -->
+      <line x1="200" y1="85" x2="205" y2="150" stroke="#333333" stroke-width="2"/>
+      <line x1="265" y1="85" x2="270" y2="150" stroke="#333333" stroke-width="2"/>
+      <line x1="330" y1="85" x2="335" y2="150" stroke="#333333" stroke-width="2"/>
+
+      <!-- Windows -->
+      <polygon points="200,85 199,70 280,55 390,100" fill="#000000" stroke="black" stroke-width="1"/>
+
+      <!-- Wheels -->
+      <circle cx="145" cy="150" r="35" fill="#000000"/>
+      <circle cx="375" cy="150" r="35" fill="#000000"/>
+
+      <!-- Wheel Rims -->
+      <circle cx="145" cy="150" r="20" fill="#353535"/>
+      <circle cx="375" cy="150" r="20" fill="#353535"/>
+  </svg>
+  ```
+  </details>
+  <details>
+    <summary>cybertruck.html</summary>
+
+  ```html
+  <!DOCTYPE html>
+
+  <html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="kimpro82">
+      <meta name="date" content="2024-11-06">
+      <title>SVG Practice : Cybertruck</title>
+      <link rel="stylesheet" href="cybertruck.css">
+  </head>
+  <body>
+      <h1>Cybertruck</h1>
+      <div class="container">
+          <object id="car-svg" data="cybertruck.svg" type="image/svg+xml"></object>
+      </div>
+  </body>
+
+  </html>
+  ```
+  </details>
+  <details>
+    <summary>cybertruck.css</summary>
+
+  ```css
+  body {
+      text-align: center;
+  }
+
+  .container {
+      width: 100%;
+      overflow: hidden;
+  }
+
+  #car-svg {
+      width: 50%;
+      animation: drive 1.5s ease-in infinite;
+  }
+
+  @keyframes drive {
+      from { transform: translateX(-150%); }
+      to { transform: translateX(150%); }
+  }
+
+  #wheel-left, #wheel-right {
+      animation: wheel-spin 1s linear infinite;
+      transform-origin: center;
+      transform-box: fill-box;
+  }
+  ```
+  </details>
 
 
 ## [Shape Color Changer (2024.09.18)](#list)
