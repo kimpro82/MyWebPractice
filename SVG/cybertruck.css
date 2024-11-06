@@ -1,0 +1,29 @@
+/*
+    SVG Practice : Cybertruck
+    kimpro82 / 2024.11.06
+ */
+
+ body {
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+#car-svg {
+    width: 50%;
+    animation: drive 1.5s ease-in infinite;
+}
+
+@keyframes drive {
+    from { transform: translateX(-150%); }
+    to { transform: translateX(150%); }
+}
+
+#wheel-left, #wheel-right {
+    animation: wheel-spin 1s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
