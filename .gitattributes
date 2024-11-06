@@ -1,7 +1,9 @@
-/Hosting/*.js linguist-vendored
+*.svg linguist-detectable
+
+/Hosting/*.js linguist-generated
 
 /Bootstrap/bootstrap5/ linguist-vendored
-/Python/*_rendered.html linguist-vendored
-/SVG/*.js linguist-vendored
-/TypeScript/*.js linguist-vendored
+/Python/*_rendered.html linguist-generated
+/SVG/*.js linguist-generated
+/TypeScript/*.js linguist-generated
 /VBScript/*.vbs linguist-language=VBScript
