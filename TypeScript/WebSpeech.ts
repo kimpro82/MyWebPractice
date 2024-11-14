@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get references to DOM elements
     const textInput = document.getElementById('textInput') as HTMLInputElement;
     const speakButton = document.getElementById('speakButton') as HTMLButtonElement;
-    
+
     // Create an instance of TextToSpeech
     const tts = new TextToSpeech();
 
