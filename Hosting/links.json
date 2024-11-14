@@ -1,5 +1,19 @@
 [
   {
+    "category": "TypeScript",
+    "title": "Web Speech API Practic",
+    "date": "2024.11.14",
+    "url": "../TypeScript/WebSpeech.html",
+    "comment": "<img src=\"../TypeScript/Images/WebSpeechAPIPractice.PNG\"  width=100%>"
+  },
+  {
+    "category": "SVG",
+    "title": "Cybertruck",
+    "date": "2024.11.06",
+    "url": "../SVG/cybertruck.html",
+    "comment": "<img src=\"../SVG/Images/SVG_Cybertruck.gif\"  width=100%>"
+  },
+  {
     "category": "SVG",
     "title": "Initial Practice : Shape Color Changer",
     "date": "2024.09.18",
