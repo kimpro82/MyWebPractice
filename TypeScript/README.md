@@ -16,6 +16,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 ## [Web Speech API Practice (2024.11.14)](#list)
 
 - **Text-to-Speech(TTS)** conversion of Korean language input utilizing *Web Speech API*
+  - As a feature natively supported by most browsers, it requires no additional installation or importing, making it usable even in offline environments such as airplane mode
 
   ![Web Speech API Practice](./Images/WebSpeechAPIPractice.PNG)
 
