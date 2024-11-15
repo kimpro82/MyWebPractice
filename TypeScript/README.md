@@ -5,11 +5,113 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 
 ### \<List>
 
+- [Web Speech API Practice (2024.11.14)](#web-speech-api-practice-20241114)
 - [`helloWorld("console.log")` (2024.05.23)](#helloworldconsolelog-20240523)
 - [Import a JSON file (2024.01.30)](#import-a-json-file-20240130)
 - [Touch Event Practice (2024.01.16)](#touch-event-practice-20240116)
 - [Big Block Lettering in Console (2023.05.28)](#big-block-lettering-in-console-20230528)
 - [Hello World (2023.02.28)](#hello-world-20230228)
+
+
+## [Web Speech API Practice (2024.11.14)](#list)
+
+- **Text-to-Speech(TTS)** conversion of Korean language input utilizing *Web Speech API*
+  - As a feature natively supported by most browsers, it requires no additional installation or importing, making it usable even in offline environments such as airplane mode
+
+  ![Web Speech API Practice](./Images/WebSpeechAPIPractice.PNG)
+
+- Reference
+  - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/) > [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
+- Code
+  <details>
+    <summary>WebSpeech.html</summary>
+
+  ```html
+  <!DOCTYPE html>
+
+  <html lang="ko">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="kimpro82">
+      <meta name="date" content="2024-11-14">
+      <title>Web Speech API Practice</title>
+      <script defer src="WebSpeech.js"></script>
+  </head>
+
+  <body>
+      <h1>한글 TTS 예제</h1>
+      <input type="text" id="textInput" placeholder="텍스트를 입력하세요">
+      <button id="speakButton">읽기</button>
+  </body>
+
+  </html>
+  ```
+  </details>
+  <details>
+    <summary>WebSpeech.ts</summary>
+
+  ```ts
+  /**
+  * TextToSpeech class for converting text to speech using Web Speech API
+  */
+  class TextToSpeech {
+      private synth: SpeechSynthesis;
+      private utterance: SpeechSynthesisUtterance;
+
+      /**
+      * Initializes the TextToSpeech instance
+      */
+      constructor() {
+          this.synth = window.speechSynthesis;
+          this.utterance = new SpeechSynthesisUtterance();
+      }
+
+      /**
+      * Converts the given text to speech
+      * @param text - The text to be spoken
+      */
+      speak(text: string): void {
+          // Check if speech is already in progress
+          if (this.synth.speaking) {
+              console.error('Speech is already in progress.');
+              return;
+          }
+
+          // Configure the utterance
+          this.utterance.text = text;
+          this.utterance.lang = 'ko-KR';  // Set language to Korean
+          this.utterance.rate = 1;        // Set speech rate (1 is normal speed)
+          this.utterance.pitch = 1;       // Set pitch (1 is normal pitch)
+
+          // Start speaking
+          this.synth.speak(this.utterance);
+      }
+  }
+  ```
+  ```ts
+  // Wait for the DOM to be fully loaded before executing
+  document.addEventListener('DOMContentLoaded', () => {
+      // Get references to DOM elements
+      const textInput = document.getElementById('textInput') as HTMLInputElement;
+      const speakButton = document.getElementById('speakButton') as HTMLButtonElement;
+
+      // Create an instance of TextToSpeech
+      const tts = new TextToSpeech();
+
+      // Add click event listener to the speak button
+      speakButton.addEventListener('click', () => {
+          const text = textInput.value.trim();
+          if (text) {
+              tts.speak(text);  // Speak the input text
+          } else {
+              alert('Please enter some text.');  // Alert if no text is entered
+          }
+      });
+  });
+  ```
+  </details>
 
 
 ## [`helloWorld("console.log")` (2024.05.23)](#list)
