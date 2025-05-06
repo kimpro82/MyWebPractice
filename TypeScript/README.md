@@ -8,7 +8,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 - [Render CSV File on a Web Page (2025.05.06)](#render-csv-file-on-a-web-page-20250506)
 - [Web Speech API Practice (2024.11.14)](#web-speech-api-practice-20241114)
 - [`helloWorld("console.log")` (2024.05.23)](#helloworldconsolelog-20240523)
-- [Import a JSON file (2024.01.30)](#import-a-json-file-20240130)
+- [Render JSON File on a Web Page (2024.01.30)](#render-json-file-on-a-web-page-20240130)
 - [Touch Event Practice (2024.01.16)](#touch-event-practice-20240116)
 - [Big Block Lettering in Console (2023.05.28)](#big-block-lettering-in-console-20230528)
 - [Hello World (2023.02.28)](#hello-world-20230228)
@@ -308,17 +308,17 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   </details>
 
 
-## [Import a JSON file (2024.01.30)](#list)
+## [Render JSON File on a Web Page (2024.01.30)](#list)
 
 - Use `XMLHttpRequest()` → Success! (This was a tough process)
   - Reference : [mdn web docs](https://developer.mozilla.org/) > [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
   - Apply also this new technology(?) immediately to the [hosting page](/Hosting/main_20240130.ts) as well
 - Code and Result
 
-  ![index.html](./Images/ImportJSON.png)
+  ![index.html](./Images/RenderJSON.png)
 
   <details>
-    <summary>ImportJSON.html</summary>
+    <summary>RenderJSON.html</summary>
 
   ```html
   <html lang="en">
@@ -326,8 +326,8 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ImportJSON.css">
-    <script defer src="ImportJSON.js"></script>
+    <link rel="stylesheet" href="RenderJSON.css">
+    <script defer src="RenderJSON.js"></script>
     <title>Import JSON file</title>
   </head>
 
@@ -338,7 +338,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>ImportJSON.css</summary>
+    <summary>RenderJSON.css</summary>
 
   ```css
   table {
@@ -354,7 +354,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>ImportJSON.ts</summary>
+    <summary>RenderJSON.ts</summary>
 
   ```ts
   /**
@@ -427,14 +427,14 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   ```ts
   // URL for fetching JSON data.
-  const dataUrl = "ImportJSON.json";
+  const dataUrl = "RenderJSON.json";
 
   // Fetch JSON data and render the table.
   fetchData(dataUrl);
   ```
   </details>
   <details open="">
-    <summary>ImportJSON.json</summary>
+    <summary>RenderJSON.json</summary>
 
   ```json
   [
