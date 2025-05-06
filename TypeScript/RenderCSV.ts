@@ -26,6 +26,7 @@ async function loadCSV(): Promise<void> {
   const csvText = await response.text();
 
   // Parse the CSV content using PapaParse library, skipping empty lines
+  // @ts-ignore: Papa is loaded globally
   const result = Papa.parse<string[]>(csvText, { skipEmptyLines: true });
   
   // Destructure the headers and rows from the parsed data
