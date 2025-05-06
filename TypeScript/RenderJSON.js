@@ -1,4 +1,4 @@
-// Practice to Import JSON
+// Practice to Render JSON
 // 2024.01.30
 /**
  * Performs an HTTP GET request to fetch JSON data from the specified URL.
@@ -62,6 +62,6 @@ var renderTable = function (jsonData) {
     document.body.appendChild(table);
 };
 // URL for fetching JSON data.
-var dataUrl = "ImportJSON.json";
+var dataUrl = "RenderJSON.json";
 // Fetch JSON data and render the table.
 fetchData(dataUrl);
