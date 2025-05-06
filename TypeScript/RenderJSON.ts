@@ -1,4 +1,4 @@
-// Practice to Import JSON
+// Practice to Render JSON
 // 2024.01.30
 
 /**
@@ -69,7 +69,7 @@ const renderTable = (jsonData: any[]): void => {
 };
 
 // URL for fetching JSON data.
-const dataUrl = "ImportJSON.json";
+const dataUrl = "RenderJSON.json";
 
 // Fetch JSON data and render the table.
 fetchData(dataUrl);
