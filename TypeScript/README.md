@@ -5,12 +5,167 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
 
 ### \<List>
 
+- [Render CSV File on a Web Page (2025.05.06)](#render-csv-file-on-a-web-page-20250506)
 - [Web Speech API Practice (2024.11.14)](#web-speech-api-practice-20241114)
 - [`helloWorld("console.log")` (2024.05.23)](#helloworldconsolelog-20240523)
-- [Import a JSON file (2024.01.30)](#import-a-json-file-20240130)
+- [Render JSON File on a Web Page (2024.01.30)](#render-json-file-on-a-web-page-20240130)
 - [Touch Event Practice (2024.01.16)](#touch-event-practice-20240116)
 - [Big Block Lettering in Console (2023.05.28)](#big-block-lettering-in-console-20230528)
 - [Hello World (2023.02.28)](#hello-world-20230228)
+
+
+## [Render CSV File on a Web Page (2025.05.06)](#list)
+
+- Practice loading a CSV file and rendering it as a table on the web
+
+  ![Dinosaurs](./Images/RenderCSV.png)
+
+- Uses the `PapaParse` library
+  - In the TypeScript code, the dependency is simply acknowledged like this:
+    ```ts
+    // @ts-ignore: Papa is loaded globally
+    const result = Papa.parse<string[]>(csvText, { skipEmptyLines: true });
+    ```
+  - The library is included separately via a `<script>` tag in the HTML file, making `Papa` available in the global scope.
+
+- Code and Result
+  <details open="">
+    <summary>RenderCSV.csv</summary>
+
+  ```csv
+  Name,Category,Description
+  Brachiosaurus,Dinosaur,Herbivorous land dinosaur
+  Pteranodon,Pterosaur,"Flying reptile, not a dinosaur"
+  Plesiosaurus,Marine Reptile,"Sea-dwelling reptile, not a dinosaur"
+  ```
+  </details>
+  <details>
+    <summary>RenderCSV.html</summary>
+
+  ```html
+  <!DOCTYPE html>
+
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="kimpro82" />
+    <meta name="date" content="2025-05-06" />
+
+    <title>Dinosaur Classification Table</title>
+
+    <link rel="stylesheet" href="RenderCSV.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="RenderCSV.js" defer></script>
+  </head>
+
+  <body>
+    <h1>Dinosaurs</h1>
+    <table id="dino-table"></table>
+  </body>
+
+  </html>
+  ```
+  </details>
+  <details>
+    <summary>RenderCSV.css</summary>
+
+  ```css
+  body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f4f4f4;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    table {
+      width: 100%;
+      max-width: 800px;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+    }
+    
+    th, td {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f0f0f0;
+    }
+  ```
+  </details>
+  <details>
+    <summary>RenderCSV.ts</summary>
+
+  ```ts
+  // Constants for the CSV file name and the table element ID
+  const CSV_FILE_NAME = 'Dinosaurs.csv';
+  const TABLE_ELEMENT_ID = 'dino-table';
+  ```
+  ```ts
+  /**
+  * Fetches the CSV file, parses the content, and generates an HTML table.
+  * The first row of the CSV is used as table headers, and the remaining rows as table body content.
+  * 
+  * @returns {Promise<void>} Resolves when the table is populated with data.
+  */
+  async function loadCSV(): Promise<void> {
+    // Fetch the CSV file
+    const response = await fetch(CSV_FILE_NAME);
+    const csvText = await response.text();
+
+    // Parse the CSV content using PapaParse library, skipping empty lines
+    // @ts-ignore: Papa is loaded globally
+    const result = Papa.parse<string[]>(csvText, { skipEmptyLines: true });
+    
+    // Destructure the headers and rows from the parsed data
+    const [headers, ...rows] = result.data;
+
+    // Get the table element by its ID
+    const table = document.getElementById(TABLE_ELEMENT_ID) as HTMLTableElement;
+    
+    // Clear any existing content in the table
+    table.innerHTML = '';
+
+    // Create a table header and populate it with CSV headers
+    const thead = document.createElement('thead');
+    const headerRow = document.createElement('tr');
+    headers.forEach(header => {
+      const th = document.createElement('th');
+      th.textContent = header;
+      headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    // Create table rows for each CSV row and populate with cells
+    const tbody = document.createElement('tbody');
+    rows.forEach(row => {
+      const tr = document.createElement('tr');
+      row.forEach(cell => {
+        const td = document.createElement('td');
+        td.textContent = cell;
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+  }
+  ```
+  ```ts
+  // Call the function to load and display the CSV data in the table
+  loadCSV();
+  ```
+  </details>
 
 
 ## [Web Speech API Practice (2024.11.14)](#list)
@@ -153,17 +308,17 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   </details>
 
 
-## [Import a JSON file (2024.01.30)](#list)
+## [Render JSON File on a Web Page (2024.01.30)](#list)
 
 - Use `XMLHttpRequest()` → Success! (This was a tough process)
   - Reference : [mdn web docs](https://developer.mozilla.org/) > [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
   - Apply also this new technology(?) immediately to the [hosting page](/Hosting/main_20240130.ts) as well
 - Code and Result
 
-  ![index.html](./Images/ImportJSON.png)
+  ![index.html](./Images/RenderJSON.png)
 
   <details>
-    <summary>ImportJSON.html</summary>
+    <summary>RenderJSON.html</summary>
 
   ```html
   <html lang="en">
@@ -171,8 +326,8 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ImportJSON.css">
-    <script defer src="ImportJSON.js"></script>
+    <link rel="stylesheet" href="RenderJSON.css">
+    <script defer src="RenderJSON.js"></script>
     <title>Import JSON file</title>
   </head>
 
@@ -183,7 +338,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>ImportJSON.css</summary>
+    <summary>RenderJSON.css</summary>
 
   ```css
   table {
@@ -199,7 +354,7 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   </details>
   <details>
-    <summary>ImportJSON.ts</summary>
+    <summary>RenderJSON.ts</summary>
 
   ```ts
   /**
@@ -272,14 +427,14 @@ I heard that no one ignores TypeScript users. However, it was enough for me to b
   ```
   ```ts
   // URL for fetching JSON data.
-  const dataUrl = "ImportJSON.json";
+  const dataUrl = "RenderJSON.json";
 
   // Fetch JSON data and render the table.
   fetchData(dataUrl);
   ```
   </details>
   <details open="">
-    <summary>ImportJSON.json</summary>
+    <summary>RenderJSON.json</summary>
 
   ```json
   [

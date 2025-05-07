@@ -29,9 +29,10 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 ## Scripting Languages
 
 ### [TypeScript](/TypeScript/)
+- [Render CSV File on a Web Page (2025.05.06)](/TypeScript/README.md#render-csv-file-on-a-web-page-20250506)
 - [Web Speech API Practice (2024.11.14)](/TypeScript/README.md#web-speech-api-practice-20241114)
 - [`helloWorld("console.log")` (2024.05.23)](/TypeScript/README.md#helloworldconsolelog-20240523)
-- [Import a JSON file (2024.01.30)](/TypeScript/README.md#import-a-json-file-20240130)
+- [Render JSON File on a Web Page (2024.01.30)](/TypeScript/README.md#render-json-file-on-a-web-page-20240130)
 - [Touch Event Practice (2024.01.16)](/TypeScript/README.md#touch-event-practice-20240116)
 - [Big Block Lettering in Console (2023.05.28)](/TypeScript/README.md#big-block-lettering-in-console-20230528)
 - [Hello World (2023.02.28)](/TypeScript/README.md#hello-world-20230228)
