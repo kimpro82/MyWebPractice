@@ -5,14 +5,13 @@ Django, Flask, FastAPI and aiogram
 
 ### \<List>
 
-- [`aiogram` : Telegram Bot Initial Practice (2026.03.31)](#aiogram--telegram-bot-initial-practice-20260331)
+- [*aiogram* : Telegram Bot Initial Practice (2026.03.31)](#aiogram--telegram-bot-initial-practice-20260331)
 - [Flask/FastAPI : Sum Calculator (2024.06.07)](#flaskfastapi--sum-calculator-20240607)
 
 
-## [`aiogram` : Telegram Bot Initial Practice (2026.03.31)](#list)
+## [*aiogram* : Telegram Bot Initial Practice (2026.03.31)](#list)
 
-- Initial Practice of aiogram  
-  - Practice project for Telegram bot using `aiogram` library.
+- Initial Practice for Telegram bot using *aiogram* library
   - Features include periodic time reports, `/time` command, `/pick` command, and echo handler.
 
   ![telegram_bot_20260331_masking.PNG](./aiogram/images/telegram_bot_20260331_masking.PNG)
