@@ -25,10 +25,10 @@ Django, Flask, FastAPI and aiogram
   - Run : `python ./main.py`
 
 
-## [Flask/FastAPI : Sum Calculator (2024.06.07)](#list)
+## [*Flask*/*FastAPI* : Sum Calculator (2024.06.07)](#list)
 
-- Initial Practice of Flask and FastAPI  
-  - Flask is simple but FastAPI supports asynchronous programming.
+- Initial Practice of *Flask* and *FastAPI*  
+  - *Flask* is simple but *FastAPI* supports asynchronous programming.
   - The results are absolutely the same.
 
   ![Sum Calculator](./Images/Flask_FastAPI_SumCalculator.png)
