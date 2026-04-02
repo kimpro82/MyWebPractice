@@ -14,7 +14,7 @@ Django, Flask, FastAPI and aiogram
 - Initial Practice for Telegram bot using *aiogram* library
   - Features include periodic time reports, `/time` command, `/pick` command, and echo handler.
 
-  ![telegram_bot_20260331_masking.PNG](./aiogram/images/telegram_bot_20260331_masking.PNG)
+  ![telegram_bot_20260331_masking.PNG](./aiogram/telegram_bot_practice/images/telegram_bot_20260331_masking.PNG)
 
 - Development Environment  
   - *Python* 3.8.17 / *aiogram* 3.5.0 / *python-dotenv* 1.0.0 in local environment.
