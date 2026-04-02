@@ -75,7 +75,7 @@ async def start_handler(message: types.Message):
     Handle the /start command.
     """
     await message.answer(
-        "Welcome! I am your Python Bot.\n"
+        "Welcome! I am your Telegram Bot.\n"
         "Commands:\n"
         "/time - Check current KST time\n"
         "/pick A B C - Pick one randomly from A, B, and C"
