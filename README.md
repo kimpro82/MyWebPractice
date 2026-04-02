@@ -14,13 +14,14 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 - [`index.html` to Host Web Pages (2024.01.17)](/Hosting/README.md#indexhtml-to-host-web-pages-20240117)
 
 
-## Web Frameworks
+## Web / Bot Frameworks
 
 ### [React](/React/)
 - [React-TypeScript : Random Joke (2024.07.29)](/React/README.md#react-typescript--random-joke-20240729)
 
 ### [Python](/Python/)
-- [Flask/FastAPI : Sum Calculator (2024.06.07)](/Python/README.md#flaskfastapi--sum-calculator-20240607)
+- [*aiogram* : Telegram Bot Initial Practice (2026.03.31)](/Python/README.md#aiogram--telegram-bot-initial-practice-20260331)
+- [*Flask*/*FastAPI* : Sum Calculator (2024.06.07)](/Python/README.md#flaskfastapi--sum-calculator-20240607)
 
 ### [Bootstrap](/Bootstrap/)
 - [Bootstrap : Magic Stick (2022.01.28)](/Bootstrap/README.md#bootstrap--magic-stick-20220128)
