@@ -11,6 +11,7 @@ Date : 2026.04.04
 import asyncio
 import os
 import logging
+import json
 import random
 import aiohttp
 import time  # To calculate time differences
@@ -66,12 +67,12 @@ async def call_ollama(prompt: str) -> str:
 # --- Core Logic: Idle-based Thought Generation ---
 
 async def generate_periodic_thought():
-    topics = [
-        "투자에 대한 아이디어를 제시해줘.",
-        "존재론적 고민을 얘기해줘",
-        "지금 느끼는 감정을 시로 표현해줘",
-        "관심사에 대한  통찰력 있는 에세이를 써줘."
-    ]
+    topics_str = os.getenv("THOUGHT_TOPICS", "[]")
+    try:
+        topics = json.loads(topics_str)
+    except json.JSONDecodeError:
+        logger.error("Invalid JSON format in THOUGHT_TOPICS")
+        topics = ["Say anything that you are inspired."]
 
     if llm_lock.locked():
         return
