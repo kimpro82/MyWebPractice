@@ -82,7 +82,7 @@ async def generate_periodic_thought():
         logger.info(f"Starting idle-based thought: {topic[:15]}...")
         try:
             content = await call_ollama(topic)
-            await bot.send_message(TARGET_USER_ID, f"💡 **AI 사색 보고**\n\n{content}", parse_mode="Markdown")
+            await bot.send_message(TARGET_USER_ID, f"💡 **AI 생각**\n\n{content}", parse_mode="Markdown")
         except asyncio.CancelledError:
             logger.info("Thought generation cancelled by user activity.")
         except Exception as e:
