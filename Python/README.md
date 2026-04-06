@@ -5,8 +5,29 @@ Django, Flask, FastAPI and aiogram
 
 ### \<List>
 
+- [*aiogram* : Telegram Bot with Local Ollama LLM (2026.04.04)](#aiogram--telegram-bot-with-local-ollama-llm-20260404)
 - [*aiogram* : Telegram Bot Initial Practice (2026.03.31)](#aiogram--telegram-bot-initial-practice-20260331)
 - [Flask/FastAPI : Sum Calculator (2024.06.07)](#flaskfastapi--sum-calculator-20240607)
+
+
+## [*aiogram* : Telegram Bot with Local Ollama LLM (2026.04.04)](#list)
+
+- Extended Telegram bot using *aiogram* and a local Ollama LLM
+  - Idle-time watchdog sends periodic AI thoughts after a configurable silence interval.
+  - Supports direct chat replies through local Ollama on every user message.
+  - Topics, system prompt, and idle interval are configured in `.env`.
+
+    ![Telegram_Bot_02_20260405_0451.png](./aiogram/telegram_bot_with_ollama/images/Telegram_Bot_02_20260405_0451.PNG)
+
+
+- Development Environment  
+  - *Python* 3.8.17 / *aiogram* 3.5.0 / *aiohttp* / *python-dotenv* with local Ollama.
+
+- How to Run
+  - Installation : `pip install aiogram python-dotenv`
+  - Copy `.env` from `.env_sample` and configure:
+    - `BOT_TOKEN`, `USER_ID`, `OLLAMA_BASE_URL`, `LLM_MODEL`, `REPORT_INTERVAL`, `SYSTEM_PROMPT`, `THOUGHT_TOPICS`
+  - Run : `python ./main.py`
 
 
 ## [*aiogram* : Telegram Bot Initial Practice (2026.03.31)](#list)

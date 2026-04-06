@@ -16,12 +16,13 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 
 ## Web / Bot Frameworks
 
-### [React](/React/)
-- [React-TypeScript : Random Joke (2024.07.29)](/React/README.md#react-typescript--random-joke-20240729)
-
 ### [Python](/Python/)
+- [*aiogram* : Telegram Bot with Local Ollama LLM (2026.04.04)](/Python/README.md#aiogram--telegram-bot-with-local-ollama-llm-20260404)
 - [*aiogram* : Telegram Bot Initial Practice (2026.03.31)](/Python/README.md#aiogram--telegram-bot-initial-practice-20260331)
 - [*Flask*/*FastAPI* : Sum Calculator (2024.06.07)](/Python/README.md#flaskfastapi--sum-calculator-20240607)
+
+### [React](/React/)
+- [React-TypeScript : Random Joke (2024.07.29)](/React/README.md#react-typescript--random-joke-20240729)
 
 ### [Bootstrap](/Bootstrap/)
 - [Bootstrap : Magic Stick (2022.01.28)](/Bootstrap/README.md#bootstrap--magic-stick-20220128)
