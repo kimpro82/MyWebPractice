@@ -183,6 +183,7 @@ flowchart TD
     class E,F payment;
     class H,I logistics;
 ```
+&nbsp;
     </td>
     <td width="50%" valign="top">
       <strong>2) Swimlane Structure (One <code>subgraph</code> per System)</strong><br>
@@ -222,16 +223,17 @@ flowchart TD
     F -->|아니오| G
     F -->|예| H --> I --> J
 ```
+&nbsp;
+  </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+            The responsible party is distinguished only through node text and <code>classDef</code> colors. As the number of nodes grows, readers must rely on the color legend to identify responsibility, making longer processes harder to trace.
+    </td>
+    <td width="50%" valign="top">
+            Each <code>subgraph</code> becomes a lane, making node ownership immediately visible through position. Arrows crossing system boundaries show system interfaces and responsibility handoff points, making integrations easier to identify.
     </td>
   </tr>
-    <tr>
-        <td width="50%" valign="top">
-            The responsible party is distinguished only through node text and <code>classDef</code> colors. As the number of nodes grows, readers must rely on the color legend to identify responsibility, making longer processes harder to trace.
-        </td>
-        <td width="50%" valign="top">
-            Each <code>subgraph</code> becomes a lane, making node ownership immediately visible through position. Arrows crossing system boundaries show system interfaces and responsibility handoff points, making integrations easier to identify.
-        </td>
-    </tr>
 </table>
 
 ##### 3) Comparison
