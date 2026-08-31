@@ -155,8 +155,11 @@ Compare the readability and layout stability of swimlanes, which clearly separat
 #### Practice Content
 - Model the same process in two forms and compare them.
 
-##### 1) Single Flowchart with `subgraph` (Traditional Approach)
-([`diagrams/03a_SingleFlowchartSubgraph.mmd`](/Mermaid/diagrams/03a_SingleFlowchartSubgraph.mmd))
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>1) Single Flowchart with <code>subgraph</code> (Traditional Approach)</strong><br>
+      (<a href="/Mermaid/diagrams/03a_SingleFlowchartSubgraph.mmd"><code>diagrams/03a_SingleFlowchartSubgraph.mmd</code></a>)
 
 ```mermaid
 flowchart TD
@@ -181,11 +184,11 @@ flowchart TD
     class H,I logistics;
 ```
 
-- The responsible party (employee, office, coffee machine, or barista) is distinguished only through node text and `classDef` colors.
-- As the number of nodes grows, readers must rely on the color legend to identify responsibility, making longer processes harder to trace.
-
-##### 2) Swimlane Structure (One `subgraph` per System)
-([`diagrams/03b_SwimlaneStructure.mmd`](/Mermaid/diagrams/03b_SwimlaneStructure.mmd))
+The responsible party is distinguished only through node text and <code>classDef</code> colors. As the number of nodes grows, readers must rely on the color legend to identify responsibility, making longer processes harder to trace.
+    </td>
+    <td width="50%" valign="top">
+      <strong>2) Swimlane Structure (One <code>subgraph</code> per System)</strong><br>
+      (<a href="/Mermaid/diagrams/03b_SwimlaneStructure.mmd"><code>diagrams/03b_SwimlaneStructure.mmd</code></a>)
 
 ```mermaid
 flowchart TD
@@ -222,8 +225,10 @@ flowchart TD
     F -->|예| H --> I --> J
 ```
 
-- Each `subgraph` becomes a lane, making node ownership immediately visible through position.
-- Arrows crossing system boundaries, such as `C -->|yes| E` and `F -->|yes| H`, show system interfaces and responsibility handoff points, making integrations easier to identify.
+Each <code>subgraph</code> becomes a lane, making node ownership immediately visible through position. Arrows crossing system boundaries show system interfaces and responsibility handoff points, making integrations easier to identify.
+    </td>
+  </tr>
+</table>
 
 ##### 3) Comparison
 
