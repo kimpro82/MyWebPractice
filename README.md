@@ -62,3 +62,10 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 
 - [Cybertruck (2024.11.06)](/SVG/README.md#cybertruck-20241106)
 - [Shape Color Changer (2024.09.18)](/SVG/README.md#shape-color-changer-20240918)
+
+
+## [Mermaid](/Mermaid/)
+
+- [Topic 3: Swimlane vs Traditional Flowchart](/Mermaid/README.md#topic-3-swimlane-vs-traditional-flowchart)
+- [Topic 2: Hybrid Horizontal/Vertical Layout](/Mermaid/README.md#topic-2-hybrid-horizontalvertical-layout)
+- [Topic 1: Node Text Styling](/Mermaid/README.md#topic-1-node-text-styling)
