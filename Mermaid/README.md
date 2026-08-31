@@ -34,15 +34,21 @@ Core `flowchart` practice covering node styling, hybrid layout control, and resp
 flowchart TD
     A[야식 주문] --> B{냉장고에 피자 있음?}
     B -->|있음| C[전자레인지 3분 가동]
-    B -->|없음| D["<span style='color:#d00000; font-size:20px; font-weight:bold;'>⚠ 피자 멸종 위기</span>"]
-    D --> E["<span style='color:#0056b3; font-size:22px; font-weight:bold;'>배달 앱에 구조 요청!</span>"]
+    B -->|없음| D["<span style='font-size:20px; font-weight:bold;'>⚠ 피자 멸종 위기</span>"]
+    D --> E["<span style='font-size:22px; font-weight:bold;'>배달 앱에 구조 요청!</span>"]
     C --> F[행복한 야식 완료]
     E --> F
+
+    class D alert
+    class E rescue
+
+    classDef alert fill:#ffe0e0,stroke:#d00000,stroke-width:2px,color:#d00000;
+    classDef rescue fill:#0056b3,stroke:#003f7f,stroke-width:2px,color:#ffffff;
 ```
 
-- 노드 `D`, `E`는 개별 노드에만 적용되는 인라인 스타일 예시이다.
-- 폰트 크기(`font-size`), 색상(`color`), 굵기(`font-weight`)를 노드마다 다르게 지정할 수 있다.
-- 단점: 노드가 많아질수록 스타일 코드가 중복되어 유지보수가 어려워진다. → `classDef` 로 해결.
+- 노드 `D`, `E`의 텍스트 크기와 굵기는 개별 인라인 스타일로 적용한다.
+- 노드 색상은 `classDef`의 `fill`, `stroke`, `color`로 적용한다. `rescue`는 파란 배경과 흰 글씨로 명확한 대비를 만든다.
+- 인라인 HTML의 `color`는 Mermaid 보안 설정이나 렌더러에 따라 무시될 수 있으므로, 노드 색상에는 `classDef`를 사용한다.
 
 ##### 2) `classDef` 로 재사용 스타일 정의
 ([`diagrams/01b_ClassDefStyle.mmd`](/Mermaid/diagrams/01b_ClassDefStyle.mmd))
