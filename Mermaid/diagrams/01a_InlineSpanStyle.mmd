@@ -1,0 +1,7 @@
+flowchart TD
+    A[시작] --> B{재고 확인}
+    B -->|재고 있음| C[출고 처리]
+    B -->|재고 없음| D["<span style='color:#d00000; font-size:20px; font-weight:bold;'>⚠ 재고 부족 경고</span>"]
+    D --> E["<span style='color:#0d47a1; font-size:14px;'>발주 담당자에게 알림 발송</span>"]
+    C --> F[완료]
+    E --> F

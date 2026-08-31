@@ -1,0 +1,21 @@
+flowchart LR
+    A[요청 접수] --> B{입력값 검증}
+
+    subgraph VALIDATION["검증 실패 처리"]
+        direction TB
+        C[오류 코드 400 반환]
+        D[오류 코드 422 반환]
+    end
+
+    B -->|형식 오류| C
+    B -->|필수값 누락| D
+    B -->|통과| E{권한 확인}
+
+    subgraph AUTH["권한 실패 처리"]
+        direction TB
+        F[오류 코드 403 반환]
+    end
+
+    E -->|권한 없음| F
+    E -->|권한 있음| G[비즈니스 로직 수행]
+    G --> H[응답 생성]

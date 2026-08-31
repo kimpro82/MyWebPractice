@@ -1,0 +1,32 @@
+flowchart TD
+    subgraph CUST["👤 고객"]
+        direction TB
+        A[주문 요청]
+        D[품절 안내 수신]
+        G[결제 실패 안내 수신]
+        J[배송 완료 알림 수신]
+    end
+
+    subgraph MALL["🏬 쇼핑몰 서버"]
+        direction TB
+        B[재고 확인]
+        C{재고 있음?}
+    end
+
+    subgraph PAY["💳 결제 서버"]
+        direction TB
+        E[결제 승인 요청]
+        F{결제 성공?}
+    end
+
+    subgraph LOGI["🚚 물류 센터"]
+        direction TB
+        H[출고 지시]
+        I[배송 시작]
+    end
+
+    A --> B --> C
+    C -->|아니오| D
+    C -->|예| E --> F
+    F -->|아니오| G
+    F -->|예| H --> I --> J

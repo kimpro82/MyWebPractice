@@ -66,6 +66,6 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 
 ## [Mermaid](/Mermaid/)
 
-- [Topic 3: Swimlane vs Traditional Flowchart](/Mermaid/README.md#topic-3-swimlane-vs-traditional-flowchart)
-- [Topic 2: Hybrid Horizontal/Vertical Layout](/Mermaid/README.md#topic-2-hybrid-horizontalvertical-layout)
-- [Topic 1: Node Text Styling](/Mermaid/README.md#topic-1-node-text-styling)
+- [Topic 3: Swimlane vs Traditional Flowchart](/Mermaid/README.md#topic-3-스윔레인-vs-전통적-플로우차트-구조-비교)
+- [Topic 2: Hybrid Horizontal/Vertical Layout](/Mermaid/README.md#topic-2-하이브리드-가로세로-플로우차트로-공간-최적화)
+- [Topic 1: Node Text Styling](/Mermaid/README.md#topic-1-노드-텍스트-크기색상-커스터마이징)
