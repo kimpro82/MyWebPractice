@@ -1,28 +1,28 @@
 flowchart TD
-    subgraph CUST["👤 고객"]
+    subgraph CUST["👤 직원"]
         direction TB
-        A[주문 요청]
-        D[품절 안내 수신]
-        G[결제 실패 안내 수신]
-        J[배송 완료 알림 수신]
+        A[커피 주문]
+        D[영혼 없는 물 마시기]
+        G[책상 청소 당첨]
+        J[인간성 회복 알림]
     end
 
-    subgraph MALL["🏬 쇼핑몰 서버"]
+    subgraph MALL["🏢 사무실"]
         direction TB
-        B[재고 확인]
-        C{재고 있음?}
+        B[원두 재고 확인]
+        C{원두 있음?}
     end
 
-    subgraph PAY["💳 결제 서버"]
+    subgraph PAY["☕ 커피 머신"]
         direction TB
-        E[결제 승인 요청]
-        F{결제 성공?}
+        E[추출 시작]
+        F{컵을 놓았나?}
     end
 
-    subgraph LOGI["🚚 물류 센터"]
+    subgraph LOGI["🧑‍🍳 바리스타"]
         direction TB
-        H[출고 지시]
-        I[배송 시작]
+        H[카페인 투입]
+        I[향기 퍼뜨리기]
     end
 
     A --> B --> C

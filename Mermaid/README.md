@@ -27,11 +27,11 @@ Each mermaid diagram below is also saved as an independent `.mmd` file under [`/
 
 ```mermaid
 flowchart TD
-    A[시작] --> B{재고 확인}
-    B -->|재고 있음| C[출고 처리]
-    B -->|재고 없음| D["<span style='color:#d00000; font-size:20px; font-weight:bold;'>⚠ 재고 부족 경고</span>"]
-    D --> E["<span style='color:#0d47a1; font-size:14px;'>발주 담당자에게 알림 발송</span>"]
-    C --> F[완료]
+    A[야식 주문] --> B{냉장고에 피자 있음?}
+    B -->|있음| C[전자레인지 3분 가동]
+    B -->|없음| D["<span style='color:#d00000; font-size:20px; font-weight:bold;'>⚠ 피자 멸종 위기</span>"]
+    D --> E["<span style='color:#0d47a1; font-size:14px;'>배달 앱에 구조 요청</span>"]
+    C --> F[행복한 야식 완료]
     E --> F
 ```
 
@@ -44,14 +44,14 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A[시작] --> B{결제 승인 여부}
-    B -->|승인| C[주문 확정]
-    B -->|거절| D[결제 실패 처리]
-    D --> E[재시도 안내]
-    C --> F{배송 가능 지역?}
-    F -->|가능| G[배송 시작]
-    F -->|불가| H[환불 처리]
-    G --> I[완료]
+    A[점심 메뉴 고르기] --> B{통장 잔고 충분?}
+    B -->|충분| C[치킨 주문]
+    B -->|부족| D[물 마시며 반성]
+    D --> E[다음 월급날 알림 설정]
+    C --> F{배달 가능 지역?}
+    F -->|가능| G[치킨 도착 대기]
+    F -->|불가| H[슬픈 계란후라이]
+    G --> I[포만감 완료]
     H --> I
 
     class D,H danger
@@ -89,46 +89,46 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    A[요청 접수] --> B{입력값 검증}
-    B -->|형식 오류| C[오류 코드 400 반환]
-    B -->|필수값 누락| D[오류 코드 422 반환]
-    B -->|통과| E{권한 확인}
-    E -->|권한 없음| F[오류 코드 403 반환]
-    E -->|권한 있음| G[비즈니스 로직 수행]
-    G --> H[응답 생성]
+    A[회의 초대 수신] --> B{참석 사유 확인}
+    B -->|내 업무 아님| C[달력에 회의 숨기기]
+    B -->|제목이 모호함| D["일단 거절" 클릭]
+    B -->|참석 필요| E{카메라 켤 용기?}
+    E -->|없음| F[네트워크 문제인 척하기]
+    E -->|있음| G[고개 끄덕이기 연습]
+    G --> H[회의 생존]
 ```
 
-- 조건 분기(`B`, `E`)에서 나오는 오류 노드들이 모두 가로로 나열되어 화면 폭이 지나치게 넓어진다.
+- 조건 분기(`B`, `E`)에서 나오는 회피 노드들이 모두 가로로 나열되어 화면 폭이 지나치게 넓어진다.
 
 #### 2) 하이브리드 레이아웃: 전체 `LR` + 분기 구간만 내부 `TB`
 ([`diagrams/02b_HybridLR_TB.mmd`](/Mermaid/diagrams/02b_HybridLR_TB.mmd))
 
 ```mermaid
 flowchart LR
-    A[요청 접수] --> B{입력값 검증}
+    A[회의 초대 수신] --> B{참석 사유 확인}
 
-    subgraph VALIDATION["검증 실패 처리"]
+    subgraph VALIDATION["참석 회피 절차"]
         direction TB
-        C[오류 코드 400 반환]
-        D[오류 코드 422 반환]
+        C[달력에 회의 숨기기]
+        D["일단 거절" 클릭]
     end
 
-    B -->|형식 오류| C
-    B -->|필수값 누락| D
-    B -->|통과| E{권한 확인}
+    B -->|내 업무 아님| C
+    B -->|제목이 모호함| D
+    B -->|참석 필요| E{카메라 켤 용기?}
 
-    subgraph AUTH["권한 실패 처리"]
+    subgraph AUTH["카메라 회피 절차"]
         direction TB
-        F[오류 코드 403 반환]
+        F[네트워크 문제인 척하기]
     end
 
-    E -->|권한 없음| F
-    E -->|권한 있음| G[비즈니스 로직 수행]
-    G --> H[응답 생성]
+    E -->|없음| F
+    E -->|있음| G[고개 끄덕이기 연습]
+    G --> H[회의 생존]
 ```
 
-- 전체 흐름(`A → B → E → G → H`)은 그대로 `LR`을 유지해 한눈에 프로세스 순서를 파악할 수 있다.
-- 오류 처리처럼 지엽적인 분기는 `subgraph` 안에서 `direction TB` 로 세로 배치하여 가로 폭 낭비를 줄인다.
+- 전체 흐름(`A → B → E → G → H`)은 그대로 `LR`을 유지해 한눈에 진행 순서를 파악할 수 있다.
+- 회피 절차처럼 지엽적인 분기는 `subgraph` 안에서 `direction TB` 로 세로 배치하여 가로 폭 낭비를 줄인다.
 - 상위 플로우차트의 기본 `direction`(`LR`)과 무관하게 각 `subgraph` 내부에서 독립적으로 `direction` 을 지정할 수 있다.
 
 ### 정리
@@ -151,15 +151,15 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    A[고객: 주문 요청] --> B[쇼핑몰 서버: 재고 확인]
-    B --> C{재고 있음?}
-    C -->|아니오| D[고객: 품절 안내]
-    C -->|예| E[결제 서버: 결제 승인 요청]
-    E --> F{결제 성공?}
-    F -->|아니오| G[고객: 결제 실패 안내]
-    F -->|예| H[물류 센터: 출고 지시]
-    H --> I[물류 센터: 배송 시작]
-    I --> J[고객: 배송 완료 알림]
+    A[직원: 커피 주문] --> B[사무실: 원두 재고 확인]
+    B --> C{원두 있음?}
+    C -->|아니오| D[직원: 영혼 없는 물 마시기]
+    C -->|예| E[커피 머신: 추출 시작]
+    E --> F{컵을 놓았나?}
+    F -->|아니오| G[직원: 책상 청소 당첨]
+    F -->|예| H[바리스타: 카페인 투입]
+    H --> I[바리스타: 향기 퍼뜨리기]
+    I --> J[직원: 인간성 회복 알림]
 
     classDef customer fill:#e3f2fd,stroke:#1565c0;
     classDef mall fill:#fff3e0,stroke:#ef6c00;
@@ -172,7 +172,7 @@ flowchart TD
     class H,I logistics;
 ```
 
-- 담당 시스템(고객/쇼핑몰/결제/물류)을 노드 텍스트와 `classDef` 색상으로만 구분한다.
+- 담당 주체(직원/사무실/커피 머신/바리스타)를 노드 텍스트와 `classDef` 색상으로만 구분한다.
 - 노드 수가 늘어나면 "어느 시스템이 어떤 단계를 담당하는지"를 색상 범례에 의존해서 파악해야 하므로, 프로세스가 길어질수록 추적이 번거로워진다.
 
 #### 2) 스윔레인 구조 (시스템별 `subgraph` 분리)
@@ -180,30 +180,30 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    subgraph CUST["👤 고객"]
+    subgraph CUST["👤 직원"]
         direction TB
-        A[주문 요청]
-        D[품절 안내 수신]
-        G[결제 실패 안내 수신]
-        J[배송 완료 알림 수신]
+        A[커피 주문]
+        D[영혼 없는 물 마시기]
+        G[책상 청소 당첨]
+        J[인간성 회복 알림]
     end
 
-    subgraph MALL["🏬 쇼핑몰 서버"]
+    subgraph MALL["🏢 사무실"]
         direction TB
-        B[재고 확인]
-        C{재고 있음?}
+        B[원두 재고 확인]
+        C{원두 있음?}
     end
 
-    subgraph PAY["💳 결제 서버"]
+    subgraph PAY["☕ 커피 머신"]
         direction TB
-        E[결제 승인 요청]
-        F{결제 성공?}
+        E[추출 시작]
+        F{컵을 놓았나?}
     end
 
-    subgraph LOGI["🚚 물류 센터"]
+    subgraph LOGI["🧑‍🍳 바리스타"]
         direction TB
-        H[출고 지시]
-        I[배송 시작]
+        H[카페인 투입]
+        I[향기 퍼뜨리기]
     end
 
     A --> B --> C
