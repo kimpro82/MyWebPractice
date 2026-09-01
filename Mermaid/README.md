@@ -238,7 +238,7 @@ flowchart TD
 
 ##### 3) Comparison
 
-| Criterion | Single Flowchart + `subgraph` (Color Grouping) | Swimlane Structure |
+| Criterion | Single Flowchart +<br>`subgraph` (Color Grouping) | Swimlane Structure |
 |---|---|---|
 | Identifying ownership | Requires checking a separate color legend | Immediately visible from lane position |
 | Identifying system boundaries and interfaces | Not explicit | Clear from arrows crossing lanes |
