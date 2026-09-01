@@ -1,3 +1,4 @@
+*.mmd linguist-language=Mermaid
 *.svg linguist-detectable
 
 /Hosting/*.js linguist-generated
