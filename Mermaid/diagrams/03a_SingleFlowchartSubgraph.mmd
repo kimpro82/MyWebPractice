@@ -1,0 +1,20 @@
+flowchart TD
+    A[직원: 커피 주문] --> B[사무실: 원두 재고 확인]
+    B --> C{원두 있음?}
+    C -->|아니오| D[직원: 영혼 없는 물 마시기]
+    C -->|예| E[커피 머신: 추출 시작]
+    E --> F{컵을 놓았나?}
+    F -->|아니오| G[직원: 테이블 청소 당첨]
+    F -->|예| H[바리스타: 카페인 투입]
+    H --> I[바리스타: 향기 퍼뜨리기]
+    I --> J[직원: 인간성 회복 알림]
+
+    classDef customer fill:#e3f2fd,stroke:#1565c0;
+    classDef mall fill:#fff3e0,stroke:#ef6c00;
+    classDef payment fill:#f3e5f5,stroke:#6a1b9a;
+    classDef logistics fill:#e8f5e9,stroke:#2e7d32;
+
+    class A,D,G,J customer;
+    class B,C mall;
+    class E,F payment;
+    class H,I logistics;

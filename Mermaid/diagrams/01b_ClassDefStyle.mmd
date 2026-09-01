@@ -1,0 +1,18 @@
+flowchart TD
+    A[점심 메뉴 고르기] --> B{통장 잔고 충분?}
+    B -->|충분| C[치킨 주문]
+    B -->|부족| D[물 마시며 반성]
+    D --> E[다음 월급날 알림 설정]
+    C --> F{배달 가능 지역?}
+    F -->|가능| G[치킨 도착 대기]
+    F -->|불가| H[슬픈 계란후라이]
+    G --> I[포만감 완료]
+    H --> I
+
+    class D,H danger
+    class F,B decision
+    class I success
+
+    classDef danger fill:#ffe0e0,stroke:#d00000,stroke-width:2px,color:#d00000,font-weight:bold;
+    classDef decision fill:#fff8dc,stroke:#e0a800,stroke-width:1.5px,color:#7a5c00;
+    classDef success fill:#e0ffe0,stroke:#2e7d32,stroke-width:2px,color:#1b5e20,font-weight:bold;

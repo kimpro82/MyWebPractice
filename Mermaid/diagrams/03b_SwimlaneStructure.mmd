@@ -1,0 +1,32 @@
+flowchart TD
+    subgraph CUST["👤 직원"]
+        direction TB
+        A[커피 주문]
+        D[영혼 없는 물 마시기]
+        G[테이블 청소 당첨]
+        J[인간성 회복 알림]
+    end
+
+    subgraph MALL["🏢 사무실"]
+        direction TB
+        B[원두 재고 확인]
+        C{원두 있음?}
+    end
+
+    subgraph PAY["☕ 커피 머신"]
+        direction TB
+        E[추출 시작]
+        F{컵을 놓았나?}
+    end
+
+    subgraph LOGI["🧑‍🍳 바리스타"]
+        direction TB
+        H[카페인 투입]
+        I[향기 퍼뜨리기]
+    end
+
+    A --> B --> C
+    C -->|아니오| D
+    C -->|예| E --> F
+    F -->|아니오| G
+    F -->|예| H --> I --> J

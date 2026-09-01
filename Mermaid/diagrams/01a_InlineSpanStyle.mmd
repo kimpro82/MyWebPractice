@@ -1,0 +1,13 @@
+flowchart TD
+    A[야식 주문] --> B{냉장고에 피자 있음?}
+    B -->|있음| C[전자레인지 3분 가동]
+    B -->|없음| D["<span style='font-size:20px; font-weight:bold;'>⚠ 피자 멸종 위기</span>"]
+    D --> E["<span style='font-size:22px; font-weight:bold;'>배달 앱에 구조 요청!</span>"]
+    C --> F[행복한 야식 완료]
+    E --> F
+
+    class D alert
+    class E rescue
+
+    classDef alert fill:#ffe0e0,stroke:#d00000,stroke-width:2px,color:#d00000;
+    classDef rescue fill:#0056b3,stroke:#003f7f,stroke-width:2px,color:#ffffff;
