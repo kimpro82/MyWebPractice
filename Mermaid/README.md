@@ -30,7 +30,7 @@ Improve readability by controlling font size, color, and weight for important de
 2. Define reusable shared styles with `classDef` and apply them through `class`.
 
 ##### 1) Inline `<span style='...'>` Styling
-([`diagrams/01a_InlineSpanStyle.mmd`](/Mermaid/diagrams/01a_InlineSpanStyle.mmd))
+([`flowchart/01a_InlineSpanStyle.mmd`](/Mermaid/flowchart/01a_InlineSpanStyle.mmd))
 
 ```mermaid
 flowchart TD
@@ -53,7 +53,7 @@ flowchart TD
 - Inline HTML `color` may be ignored depending on Mermaid security settings or the renderer, so use `classDef` for node colors.
 
 ##### 2) Reusable Styles with `classDef`
-([`diagrams/01b_ClassDefStyle.mmd`](/Mermaid/diagrams/01b_ClassDefStyle.mmd))
+([`flowchart/01b_ClassDefStyle.mmd`](/Mermaid/flowchart/01b_ClassDefStyle.mmd))
 
 ```mermaid
 flowchart TD
@@ -98,7 +98,7 @@ Reduce wasted space by keeping the overall flow horizontal (`LR`) and arranging 
 - Build hybrid layouts by combining `direction TB` and `direction LR` declarations for individual `subgraph` sections.
 
 ##### 1) Entire Diagram in `LR` (Comparison: It Continues to Expand Horizontally)
-([`diagrams/02a_FullLR.mmd`](/Mermaid/diagrams/02a_FullLR.mmd))
+([`flowchart/02a_FullLR.mmd`](/Mermaid/flowchart/02a_FullLR.mmd))
 
 ```mermaid
 flowchart LR
@@ -114,7 +114,7 @@ flowchart LR
 - The avoidance nodes branching from conditions `B` and `E` all appear horizontally, making the diagram unnecessarily wide.
 
 ##### 2) Hybrid Layout: Overall `LR` with Branches in `TB`
-([`diagrams/02b_HybridLR_TB.mmd`](/Mermaid/diagrams/02b_HybridLR_TB.mmd))
+([`flowchart/02b_HybridLR_TB.mmd`](/Mermaid/flowchart/02b_HybridLR_TB.mmd))
 
 ```mermaid
 flowchart LR
@@ -163,7 +163,7 @@ Compare the readability and layout stability of swimlanes, which clearly separat
   <tr>
     <td width="50%" valign="top">
       <strong>1) Single Flowchart with <code>subgraph</code> (Traditional Approach)</strong><br>
-      (<a href="/Mermaid/diagrams/03a_SingleFlowchartSubgraph.mmd"><code>diagrams/03a_SingleFlowchartSubgraph.mmd</code></a>)
+      (<a href="/Mermaid/flowchart/03a_SingleFlowchartSubgraph.mmd"><code>flowchart/03a_SingleFlowchartSubgraph.mmd</code></a>)
 
 ```mermaid
 flowchart TD
@@ -191,7 +191,7 @@ flowchart TD
     </td>
     <td width="50%" valign="top">
       <strong>2) Swimlane Structure (One <code>subgraph</code> per System)</strong><br>
-      (<a href="/Mermaid/diagrams/03b_SwimlaneStructure.mmd"><code>diagrams/03b_SwimlaneStructure.mmd</code></a>)
+      (<a href="/Mermaid/flowchart/03b_SwimlaneStructure.mmd"><code>flowchart/03b_SwimlaneStructure.mmd</code></a>)
 
 ```mermaid
 flowchart TD
