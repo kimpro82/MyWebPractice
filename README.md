@@ -63,6 +63,7 @@ Separate web-related codes into this repository because [[MyPractice]](https://g
 ### [Mermaid](/Mermaid/)
 
 - [Advanced Flowchart Practice (2026.08.31)](/Mermaid/README.md#advanced-flowchart-practice-20260831)
+- [Initial Practice (2025.06.25)](/Mermaid/README.md#initial-practice-20250625)
 
 ### [SVG](/SVG/)
 
