@@ -1,18 +1,22 @@
 # [My Mermaid Practice](../README.md#mermaid)
 
-Practice codes focused on *Mermaid* `flowchart` syntax, mainly node styling, layout optimization and swimlane structures.
-
-Each mermaid diagram below is also saved as an independent `.mmd` file under [`/diagrams`](/Mermaid/diagrams/), so it can be reused or rendered by external tools directly.
+Technologia~
 
 
-### \<List>
+### **\<References>**
+
+- [https://mermaid-js.github.io/](https://mermaid-js.github.io/)
+- [Mermaid Live Editor](https://mermaid.live/)
+
+
+### **\<List>**
 
 - [Advanced Flowchart Practice (2026.08.31)](#advanced-flowchart-practice-20260831)
-
+- [Initial Practice (2025.06.25)](#initial-practice-20250625)
 
 ---
 
-## Advanced Flowchart Practice (2026.08.31)
+## [Advanced Flowchart Practice (2026.08.31)](#list)
 
 Core `flowchart` practice covering node styling, hybrid layout control, and responsibility-oriented diagram structures.
 
@@ -26,7 +30,7 @@ Improve readability by controlling font size, color, and weight for important de
 2. Define reusable shared styles with `classDef` and apply them through `class`.
 
 ##### 1) Inline `<span style='...'>` Styling
-([`diagrams/01a_InlineSpanStyle.mmd`](/Mermaid/diagrams/01a_InlineSpanStyle.mmd))
+([`flowchart/01a_InlineSpanStyle.mmd`](/Mermaid/flowchart/01a_InlineSpanStyle.mmd))
 
 ```mermaid
 flowchart TD
@@ -49,7 +53,7 @@ flowchart TD
 - Inline HTML `color` may be ignored depending on Mermaid security settings or the renderer, so use `classDef` for node colors.
 
 ##### 2) Reusable Styles with `classDef`
-([`diagrams/01b_ClassDefStyle.mmd`](/Mermaid/diagrams/01b_ClassDefStyle.mmd))
+([`flowchart/01b_ClassDefStyle.mmd`](/Mermaid/flowchart/01b_ClassDefStyle.mmd))
 
 ```mermaid
 flowchart TD
@@ -94,7 +98,7 @@ Reduce wasted space by keeping the overall flow horizontal (`LR`) and arranging 
 - Build hybrid layouts by combining `direction TB` and `direction LR` declarations for individual `subgraph` sections.
 
 ##### 1) Entire Diagram in `LR` (Comparison: It Continues to Expand Horizontally)
-([`diagrams/02a_FullLR.mmd`](/Mermaid/diagrams/02a_FullLR.mmd))
+([`flowchart/02a_FullLR.mmd`](/Mermaid/flowchart/02a_FullLR.mmd))
 
 ```mermaid
 flowchart LR
@@ -110,7 +114,7 @@ flowchart LR
 - The avoidance nodes branching from conditions `B` and `E` all appear horizontally, making the diagram unnecessarily wide.
 
 ##### 2) Hybrid Layout: Overall `LR` with Branches in `TB`
-([`diagrams/02b_HybridLR_TB.mmd`](/Mermaid/diagrams/02b_HybridLR_TB.mmd))
+([`flowchart/02b_HybridLR_TB.mmd`](/Mermaid/flowchart/02b_HybridLR_TB.mmd))
 
 ```mermaid
 flowchart LR
@@ -159,7 +163,7 @@ Compare the readability and layout stability of swimlanes, which clearly separat
   <tr>
     <td width="50%" valign="top">
       <strong>1) Single Flowchart with <code>subgraph</code> (Traditional Approach)</strong><br>
-      (<a href="/Mermaid/diagrams/03a_SingleFlowchartSubgraph.mmd"><code>diagrams/03a_SingleFlowchartSubgraph.mmd</code></a>)
+      (<a href="/Mermaid/flowchart/03a_SingleFlowchartSubgraph.mmd"><code>flowchart/03a_SingleFlowchartSubgraph.mmd</code></a>)
 
 ```mermaid
 flowchart TD
@@ -187,7 +191,7 @@ flowchart TD
     </td>
     <td width="50%" valign="top">
       <strong>2) Swimlane Structure (One <code>subgraph</code> per System)</strong><br>
-      (<a href="/Mermaid/diagrams/03b_SwimlaneStructure.mmd"><code>diagrams/03b_SwimlaneStructure.mmd</code></a>)
+      (<a href="/Mermaid/flowchart/03b_SwimlaneStructure.mmd"><code>flowchart/03b_SwimlaneStructure.mmd</code></a>)
 
 ```mermaid
 flowchart TD
@@ -250,3 +254,182 @@ flowchart TD
 1. When a process is contained within one system or team, a single flowchart with `classDef` emphasis is sufficient.
 2. When several systems or teams participate sequentially and responsibility handoffs must be clear, use a swimlane structure.
 3. Swimlane layouts can become unstable when lane node counts differ greatly, causing uneven dimensions and arrow crossings. Keep lane content as balanced as practical.
+
+
+## [Initial Practice (2025.06.25)](#list)
+
+Introductory practice exploring foundational diagram types in Mermaid: **Mindmap**, **Flowchart**, and **Entity Relationship Diagram (ERD)**.
+
+---
+
+### Topic 1. Mindmap: Ohtani's Mandalart Diagram
+([`initial_practice/OhtaniMandalart.mmd`](/Mermaid/initial_practice/OhtaniMandalart.mmd))
+
+#### Goal
+Visualize hierarchical goal-setting frameworks (Mandalart matrix) using Mermaid's `mindmap` syntax (But I think it was not so good choice)
+
+#### Syntax & Key Features
+- **Root Node Syntax**: `root((text))` creates a central circle/rounded node.
+- **Branch Nodes**: `(text)` defines sub-goal category nodes with rounded borders.
+- **Indentation Hierarchy**: Indentation level dictates parent-child relationships automatically.
+
+#### Practice Content
+
+```mermaid
+mindmap
+  root((8구단 드래프트 1순위))
+    (몸 만들기)
+      몸관리
+      영양제 먹기
+      FSQ 90kg
+      RSQ 130kg
+      식사 저녁6숟갈 아침3숟갈
+      가동역
+      스테미너
+      유연성
+    (제구)
+      인스텝 개선
+      몸통 강화
+      축 흔들지 않기
+      불안정 없애기
+      멘탈을 컨트롤
+      몸을 열지 않기
+      하체 강화
+      릴리즈 포인트 안정
+    (구위)
+      각도를 만든다
+      위에서부터 공을 던진다
+      손목 강화
+      하반식 주도
+      가동력
+      회전수 증가
+      볼을 앞에서 릴리즈
+      힘 모으기
+    (스피드 160km/h)
+      축을 돌리기
+      하체 강화
+      체중 증가
+      어깨주변 강화
+      피칭 늘리기
+      라이너 캐치볼
+      가동력
+      몸통 강화
+    (변화구)
+      카운트볼 늘리기
+      포크볼 완성
+      슬라이더 구위
+      좌타자 결정구
+      거리를 상상하기
+      스트라이크 볼을 던질 때 제구
+      직구와 같은 폼으로 던지기
+      늦게 낙차가 있는 커브
+    (운)
+      인사하기
+      쓰레기 줍기
+      부실 청소
+      심판을 대하는 태도
+      책읽기
+      응원받는 사람
+      긍정적 사고
+      물건을 소중히 쓰자
+    (인간성)
+      감성
+      사랑받는 사람
+      계획성
+      감사
+      지속력
+      신뢰받는 사람
+      예의
+      배려
+    (멘탈)
+      뚜렷한 목표·목적
+      일희일비하지 않기
+      머리는 차갑게 심장은 뜨겁게
+      분위기에 휩쓸리지 않기
+      동료를 배려하는 마음
+      승리에 대한 집념
+      마음의 파도를 안 만들기
+      핀치에 강하게
+```
+
+---
+
+### Topic 2. Flowchart: Doomed to Open a Chicken Shop
+([`initial_practice/ChickenDoom.mmd`](/Mermaid/initial_practice/ChickenDoom.mmd))
+
+#### Goal
+Demonstrate decision-tree branching and multi-path convergence in a top-down (`TD`) flowchart.
+
+#### Syntax & Key Features
+- **Decision Node**: `B{어떤 길을 선택할까?}` uses curly braces `{}` to represent decision points.
+- **Multi-Branching**: `B --> C1`, `B --> C2`, `B --> C3`, `B --> C4` routes a single decision into multiple options.
+- **Path Convergence**: `C1 --> D`, `C2 --> D`, etc., merges disparate paths into a common terminal node.
+
+#### Practice Content
+
+```mermaid
+flowchart TD
+  A[진로 고민] --> B{어떤 길을 선택할까?}
+  B --> C1[대기업 취업]
+  B --> C2[공무원 준비]
+  B --> C3[창업 도전]
+  B --> C4[해외 유학]
+  C1 --> D
+  C2 --> D
+  C3 --> D
+  C4 --> D
+  D[결국 치킨집 사장]
+```
+
+---
+
+### Topic 3. ER Diagram: Dad and Boy Dynamic
+([`initial_practice/ParentingERD.mmd`](/Mermaid/initial_practice/ParentingERD.mmd))
+
+#### Goal
+Model relational data structures, entity attributes, and relationship cardinalities using Mermaid's `erDiagram` syntax.
+
+#### Syntax & Key Features
+- **Entity & Attribute Block**: `ENTITY { dataType attributeName }` defines table structures and field types.
+- **Cardinality Operators**:
+  - `||--||`: Exactly one to exactly one (1:1 relationship)
+  - `||--o{`: Exactly one to zero-or-more (1:N relationship)
+- **Relationship Verb Labeling**: `: "action"` provides semantically clear labels on relationship connectors.
+
+#### Practice Content
+
+```mermaid
+erDiagram
+  DAD {
+    string name
+    int patienceLevel
+  }
+  BOY {
+    string name
+    int energyLevel
+  }
+  TOY {
+    string type
+    bool broken
+  }
+  SNACK {
+    string flavor
+    int sugarContent
+  }
+  DAD ||--o{ TOY : "fixes"
+  BOY ||--o{ TOY : "breaks"
+  DAD ||--o{ SNACK : "hides"
+  BOY ||--o{ SNACK : "finds"
+  DAD ||--|| BOY : "raises"
+```
+
+---
+
+### Summary of Initial Practice
+
+| Diagram Type | Mermaid Keyword | Primary Use Case | Key Syntax Elements |
+|---|---|---|---|
+| **Mindmap** | `mindmap` | Hierarchical goal tracking & brainstorming | `root((...))`, indentation hierarchy, `(...)` category nodes |
+| **Flowchart** | `flowchart TD` | Process flows & decision branching | `-->` arrows, `{}` decision nodes, multi-path convergence |
+| **ER Diagram** | `erDiagram` | Relational data modeling & schema design | Entity block `{ type name }`, `||--o{` & `||--||` cardinalities |
+
