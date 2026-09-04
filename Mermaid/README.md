@@ -258,9 +258,23 @@ flowchart TD
 
 ## [Initial Practice (2025.06.25)](#list)
 
-- Practice drawing various charts with *Mermaid* : Mindmap, Flowchart, and ERDiagram
+Introductory practice exploring foundational diagram types in Mermaid: **Mindmap**, **Flowchart**, and **Entity Relationship Diagram (ERD)**.
 
-### Mindmap : Ohtani's Mandalart
+---
+
+### Topic 1. Mindmap: Ohtani's Mandalart Diagram
+([`initial_practice/OhtaniMandalart.mmd`](/Mermaid/initial_practice/OhtaniMandalart.mmd))
+
+#### Goal
+Visualize hierarchical goal-setting frameworks (Mandalart matrix) using Mermaid's `mindmap` syntax.
+
+#### Syntax & Key Features
+- **Root Node Syntax**: `root((text))` creates a central circle/rounded node.
+- **Branch Nodes**: `(text)` defines sub-goal category nodes with rounded borders.
+- **Indentation Hierarchy**: Indentation level dictates parent-child relationships automatically.
+
+#### Practice Content
+
 ```mermaid
 mindmap
   root((8구단 드래프트 1순위))
@@ -338,7 +352,26 @@ mindmap
       핀치에 강하게
 ```
 
-### Flowchart : Doomed to Open a Chicken Shop
+#### Detailed Breakdown
+- **Central Core Goal**: `8구단 드래프트 1순위` (1st draft pick selection by 8 NPB teams).
+- **8 Core Categories**: Physical Conditioning (몸 만들기), Control (제구), Pitch Quality (구위), Speed 160km/h (스피드 160km/h), Breaking Balls (변화구), Luck/Karma (운), Personality (인간성), and Mental Strength (멘탈).
+- **Action Items**: Each category branches into 8 concrete actionable habits and training metrics (e.g., picking up trash, squat targets, control stabilization).
+
+---
+
+### Topic 2. Flowchart: Doomed to Open a Chicken Shop
+([`initial_practice/ChickenDoom.mmd`](/Mermaid/initial_practice/ChickenDoom.mmd))
+
+#### Goal
+Demonstrate decision-tree branching and multi-path convergence in a top-down (`TD`) flowchart.
+
+#### Syntax & Key Features
+- **Decision Node**: `B{어떤 길을 선택할까?}` uses curly braces `{}` to represent decision points.
+- **Multi-Branching**: `B --> C1`, `B --> C2`, `B --> C3`, `B --> C4` routes a single decision into multiple options.
+- **Path Convergence**: `C1 --> D`, `C2 --> D`, etc., merges disparate paths into a common terminal node.
+
+#### Practice Content
+
 ```mermaid
 flowchart TD
   A[진로 고민] --> B{어떤 길을 선택할까?}
@@ -353,7 +386,28 @@ flowchart TD
   D[결국 치킨집 사장]
 ```
 
-### ERDiagram : Dad and Boy
+#### Detailed Breakdown
+- **Initial State**: `A[진로 고민]` (Career Anxiety/Consideration).
+- **Decision Point**: `B` branches into 4 distinct career paths (Corporate Job, Civil Service Exam, Startup, Study Abroad).
+- **Inevitable Terminal Node**: All four options converge back to `D[결국 치킨집 사장]` (Eventually becoming a fried chicken restaurant owner), humorously illustrating path convergence in process diagrams.
+
+---
+
+### Topic 3. ER Diagram: Dad and Boy Dynamic
+([`initial_practice/ParentingERD.mmd`](/Mermaid/initial_practice/ParentingERD.mmd))
+
+#### Goal
+Model relational data structures, entity attributes, and relationship cardinalities using Mermaid's `erDiagram` syntax.
+
+#### Syntax & Key Features
+- **Entity & Attribute Block**: `ENTITY { dataType attributeName }` defines table structures and field types.
+- **Cardinality Operators**:
+  - `||--||`: Exactly one to exactly one (1:1 relationship)
+  - `||--o{`: Exactly one to zero-or-more (1:N relationship)
+- **Relationship Verb Labeling**: `: "action"` provides semantically clear labels on relationship connectors.
+
+#### Practice Content
+
 ```mermaid
 erDiagram
   DAD {
@@ -378,3 +432,27 @@ erDiagram
   BOY ||--o{ SNACK : "finds"
   DAD ||--|| BOY : "raises"
 ```
+
+#### Detailed Breakdown
+- **Entities & Attributes**:
+  - `DAD`: `name` (string), `patienceLevel` (int)
+  - `BOY`: `name` (string), `energyLevel` (int)
+  - `TOY`: `type` (string), `broken` (bool)
+  - `SNACK`: `flavor` (string), `sugarContent` (int)
+- **Entity Relationships**:
+  - `DAD ||--|| BOY` : One dad raises one boy (1:1).
+  - `DAD ||--o{ TOY` : Dad fixes zero or more toys (1:N).
+  - `BOY ||--o{ TOY` : Boy breaks zero or more toys (1:N).
+  - `DAD ||--o{ SNACK` : Dad hides zero or more snacks (1:N).
+  - `BOY ||--o{ SNACK` : Boy finds zero or more snacks (1:N).
+
+---
+
+### Summary of Initial Practice
+
+| Diagram Type | Mermaid Keyword | Primary Use Case | Key Syntax Elements |
+|---|---|---|---|
+| **Mindmap** | `mindmap` | Hierarchical goal tracking & brainstorming | `root((...))`, indentation hierarchy, `(...)` category nodes |
+| **Flowchart** | `flowchart TD` | Process flows & decision branching | `-->` arrows, `{}` decision nodes, multi-path convergence |
+| **ER Diagram** | `erDiagram` | Relational data modeling & schema design | Entity block `{ type name }`, `||--o{` & `||--||` cardinalities |
+
