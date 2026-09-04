@@ -16,7 +16,7 @@ Technologia~
 
 ---
 
-## Advanced Flowchart Practice (2026.08.31)
+## [Advanced Flowchart Practice (2026.08.31)](#list)
 
 Core `flowchart` practice covering node styling, hybrid layout control, and responsibility-oriented diagram structures.
 
@@ -266,7 +266,7 @@ Introductory practice exploring foundational diagram types in Mermaid: **Mindmap
 ([`initial_practice/OhtaniMandalart.mmd`](/Mermaid/initial_practice/OhtaniMandalart.mmd))
 
 #### Goal
-Visualize hierarchical goal-setting frameworks (Mandalart matrix) using Mermaid's `mindmap` syntax.
+Visualize hierarchical goal-setting frameworks (Mandalart matrix) using Mermaid's `mindmap` syntax (But I think it was not so good choice)
 
 #### Syntax & Key Features
 - **Root Node Syntax**: `root((text))` creates a central circle/rounded node.
@@ -352,11 +352,6 @@ mindmap
       핀치에 강하게
 ```
 
-#### Detailed Breakdown
-- **Central Core Goal**: `8구단 드래프트 1순위` (1st draft pick selection by 8 NPB teams).
-- **8 Core Categories**: Physical Conditioning (몸 만들기), Control (제구), Pitch Quality (구위), Speed 160km/h (스피드 160km/h), Breaking Balls (변화구), Luck/Karma (운), Personality (인간성), and Mental Strength (멘탈).
-- **Action Items**: Each category branches into 8 concrete actionable habits and training metrics (e.g., picking up trash, squat targets, control stabilization).
-
 ---
 
 ### Topic 2. Flowchart: Doomed to Open a Chicken Shop
@@ -385,11 +380,6 @@ flowchart TD
   C4 --> D
   D[결국 치킨집 사장]
 ```
-
-#### Detailed Breakdown
-- **Initial State**: `A[진로 고민]` (Career Anxiety/Consideration).
-- **Decision Point**: `B` branches into 4 distinct career paths (Corporate Job, Civil Service Exam, Startup, Study Abroad).
-- **Inevitable Terminal Node**: All four options converge back to `D[결국 치킨집 사장]` (Eventually becoming a fried chicken restaurant owner), humorously illustrating path convergence in process diagrams.
 
 ---
 
@@ -432,19 +422,6 @@ erDiagram
   BOY ||--o{ SNACK : "finds"
   DAD ||--|| BOY : "raises"
 ```
-
-#### Detailed Breakdown
-- **Entities & Attributes**:
-  - `DAD`: `name` (string), `patienceLevel` (int)
-  - `BOY`: `name` (string), `energyLevel` (int)
-  - `TOY`: `type` (string), `broken` (bool)
-  - `SNACK`: `flavor` (string), `sugarContent` (int)
-- **Entity Relationships**:
-  - `DAD ||--|| BOY` : One dad raises one boy (1:1).
-  - `DAD ||--o{ TOY` : Dad fixes zero or more toys (1:N).
-  - `BOY ||--o{ TOY` : Boy breaks zero or more toys (1:N).
-  - `DAD ||--o{ SNACK` : Dad hides zero or more snacks (1:N).
-  - `BOY ||--o{ SNACK` : Boy finds zero or more snacks (1:N).
 
 ---
 
